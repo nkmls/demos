@@ -11,7 +11,7 @@ Kokoelma kaikkia verkkopalveluita, joiden ylläpidossa olen mukana, tai olen tot
 ## 📺 YouTube-kanavat
 
 - **[Kontiotupa](https://www.youtube.com/@kontiotupa)** – Tapahtumat ja arki
-- **[Lumi AI](https://www.youtube.com/@lumi-ai.online)** – Tekoäly ja automaatiovideot
+- **[Lumi AI](https://www.youtube.com/@lumi-ai.online)** – Tekoäly ja automaatiovideot **discontinued project**
 
 ## 🔗 Muut linkit ja työkalut
 
