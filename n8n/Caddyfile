@@ -3,7 +3,7 @@
 }
 
 n8n.kontiolahdentyottomat.fi {
-    reverse_proxy n8n:5678 {
+    reverse_proxy n8n: #porttitähän {
         flush_interval -1
     }
 }
