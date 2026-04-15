@@ -16,6 +16,8 @@ Kaikki automaatiot, Docker-stackit, lomakkeet ja dokumentaatio yhdessä paikassa
 | `qdrant/`       | Vektoritietokanta AI-agentteja varten |
 | `scripts/`      | Apuskriptit ja työkalut |
 | `workflows/`    | Kaikki n8n workflow JSON-tiedostot |
+| `ollama/`      | Ollama asetukset |
+
 
 ## 🌐 Verkkopalvelut ja kanavat
 
