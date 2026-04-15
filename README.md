@@ -36,7 +36,7 @@ Kaikki automaatiot, Docker-stackit, lomakkeet ja dokumentaatio yhdessä paikassa
 - **Microsoft 365** (Outlook, OneDrive, Calendar, Excel, Forms)
 - **xAI Grok API**
 - **WordPress**
-- **Ollama** embeddings ks. katso [ollama.md](./docs/ollama.md)
+- **Ollama** embeddings → katso [ollama.md](./docs/ollama.md)
 
 ## Tavoitteet
 
