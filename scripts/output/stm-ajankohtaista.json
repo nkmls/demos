@@ -1,0 +1,546 @@
+[
+  {
+    "title": "SOSIAALI- JA TERVEYSMINISTERIÖ",
+    "url": "https://stm.fi",
+    "date": "",
+    "summary": "",
+    "scraped_at": "2026-04-12T21:56:59.900651",
+    "source": "stm.fi/ajankohtaista"
+  },
+  {
+    "title": "Tiedotteet ja uutiset",
+    "url": "https://stm.fi/tiedotteet-ja-uutiset",
+    "date": "",
+    "summary": "",
+    "scraped_at": "2026-04-12T21:56:59.982910",
+    "source": "stm.fi/ajankohtaista"
+  },
+  {
+    "title": "Tiedotteet ja uutiset",
+    "url": "https://stm.fi/tiedotteet-ja-uutiset",
+    "date": "",
+    "summary": "",
+    "scraped_at": "2026-04-12T21:57:00.053252",
+    "source": "stm.fi/ajankohtaista"
+  },
+  {
+    "title": "Kolumnit",
+    "url": "https://stm.fi/kolumnit",
+    "date": "",
+    "summary": "",
+    "scraped_at": "2026-04-12T21:57:00.101778",
+    "source": "stm.fi/ajankohtaista"
+  },
+  {
+    "title": "Kolumnit",
+    "url": "https://stm.fi/kolumnit",
+    "date": "",
+    "summary": "",
+    "scraped_at": "2026-04-12T21:57:00.144719",
+    "source": "stm.fi/ajankohtaista"
+  },
+  {
+    "title": "Päätökset",
+    "url": "https://stm.fi/paatokset",
+    "date": "",
+    "summary": "",
+    "scraped_at": "2026-04-12T21:57:00.187458",
+    "source": "stm.fi/ajankohtaista"
+  },
+  {
+    "title": "Päätökset",
+    "url": "https://stm.fi/paatokset",
+    "date": "",
+    "summary": "",
+    "scraped_at": "2026-04-12T21:57:00.232838",
+    "source": "stm.fi/ajankohtaista"
+  },
+  {
+    "title": "Lausuntopyynnöt",
+    "url": "https://stm.fi/lausuntopyynnot",
+    "date": "",
+    "summary": "",
+    "scraped_at": "2026-04-12T21:57:00.273873",
+    "source": "stm.fi/ajankohtaista"
+  },
+  {
+    "title": "Lausuntopyynnöt",
+    "url": "https://stm.fi/lausuntopyynnot",
+    "date": "",
+    "summary": "",
+    "scraped_at": "2026-04-12T21:57:00.316737",
+    "source": "stm.fi/ajankohtaista"
+  },
+  {
+    "title": "Tapahtumat",
+    "url": "https://stm.fi/tapahtumat",
+    "date": "",
+    "summary": "",
+    "scraped_at": "2026-04-12T21:57:00.359693",
+    "source": "stm.fi/ajankohtaista"
+  },
+  {
+    "title": "Tapahtumat",
+    "url": "https://stm.fi/tapahtumat",
+    "date": "",
+    "summary": "",
+    "scraped_at": "2026-04-12T21:57:00.400943",
+    "source": "stm.fi/ajankohtaista"
+  },
+  {
+    "title": "Ohjeet, suositukset ja yleistiedoksiannot",
+    "url": "https://stm.fi/ohjeet-ja-suositukset",
+    "date": "",
+    "summary": "",
+    "scraped_at": "2026-04-12T21:57:00.448515",
+    "source": "stm.fi/ajankohtaista"
+  },
+  {
+    "title": "Ohjeet, suositukset ja yleistiedoksiannot",
+    "url": "https://stm.fi/ohjeet-ja-suositukset",
+    "date": "",
+    "summary": "",
+    "scraped_at": "2026-04-12T21:57:00.487542",
+    "source": "stm.fi/ajankohtaista"
+  },
+  {
+    "title": "Tilaa aineistoja",
+    "url": "https://stm.fi/tilaukset",
+    "date": "",
+    "summary": "",
+    "scraped_at": "2026-04-12T21:57:00.530020",
+    "source": "stm.fi/ajankohtaista"
+  },
+  {
+    "title": "Tilaa aineistoja",
+    "url": "https://stm.fi/tilaukset",
+    "date": "",
+    "summary": "",
+    "scraped_at": "2026-04-12T21:57:00.572040",
+    "source": "stm.fi/ajankohtaista"
+  },
+  {
+    "title": "STM sosiaalisessa mediassa",
+    "url": "https://stm.fi/stm-sosiaalisessa-mediassa",
+    "date": "",
+    "summary": "",
+    "scraped_at": "2026-04-12T21:57:00.638669",
+    "source": "stm.fi/ajankohtaista"
+  },
+  {
+    "title": "STM sosiaalisessa mediassa",
+    "url": "https://stm.fi/stm-sosiaalisessa-mediassa",
+    "date": "",
+    "summary": "",
+    "scraped_at": "2026-04-12T21:57:00.678034",
+    "source": "stm.fi/ajankohtaista"
+  },
+  {
+    "title": "Uutiskirjeet",
+    "url": "https://stm.fi/uutiskirjeet",
+    "date": "",
+    "summary": "",
+    "scraped_at": "2026-04-12T21:57:00.720704",
+    "source": "stm.fi/ajankohtaista"
+  },
+  {
+    "title": "Uutiskirjeet",
+    "url": "https://stm.fi/uutiskirjeet",
+    "date": "",
+    "summary": "",
+    "scraped_at": "2026-04-12T21:57:00.761369",
+    "source": "stm.fi/ajankohtaista"
+  },
+  {
+    "title": "Avoimet työpaikat",
+    "url": "https://stm.fi/avoimet-tyopaikat",
+    "date": "",
+    "summary": "",
+    "scraped_at": "2026-04-12T21:57:00.804282",
+    "source": "stm.fi/ajankohtaista"
+  },
+  {
+    "title": "Avoimet työpaikat",
+    "url": "https://stm.fi/avoimet-tyopaikat",
+    "date": "",
+    "summary": "",
+    "scraped_at": "2026-04-12T21:57:00.845940",
+    "source": "stm.fi/ajankohtaista"
+  },
+  {
+    "title": "Huijaussähköposteja liikkeellä \"Terveysministeriön\" nimissä",
+    "url": "https://stm.fi/-/huijaussahkoposteja-liikkeella",
+    "date": "Julkaisuajankohta:\n10.4.2026 16.03",
+    "summary": "",
+    "scraped_at": "2026-04-12T21:57:00.920890",
+    "source": "stm.fi/ajankohtaista"
+  },
+  {
+    "title": "Hallitus esittää keinoja etuuksien väärinkäytön ja virheellisten maksujen ehkäisemiseksi",
+    "url": "https://stm.fi/-/hallitus-esittaa-keinoja-etuuksien-vaarinkayton-ja-virheellisten-maksujen-ehkaisemiseksi",
+    "date": "Julkaisuajankohta:\n9.4.2026 14.19",
+    "summary": "",
+    "scraped_at": "2026-04-12T21:57:00.984490",
+    "source": "stm.fi/ajankohtaista"
+  },
+  {
+    "title": "Pyöreän pöydän keskustelussa haettiin ratkaisuja sote-alan harjoittelupaikkapulaan",
+    "url": "https://stm.fi/-/1410845/pyorean-poydan-keskustelussa-haettiin-ratkaisuja-sote-alan-harjoittelupaikkapulaan",
+    "date": "Julkaisuajankohta:\n9.4.2026 13.45",
+    "summary": "",
+    "scraped_at": "2026-04-12T21:57:01.053737",
+    "source": "stm.fi/ajankohtaista"
+  },
+  {
+    "title": "Hyvinvointialueet voivat hakea valtionavustusta yleisen vointimittarin käyttöönottoon",
+    "url": "https://stm.fi/-/hyvinvointialueet-voivat-hakea-valtionavustusta-yleisen-vointimittarin-kayttoonottoon-",
+    "date": "Julkaisuajankohta:\n8.4.2026 14.40",
+    "summary": "",
+    "scraped_at": "2026-04-12T21:57:01.114754",
+    "source": "stm.fi/ajankohtaista"
+  },
+  {
+    "title": "STM pyytää lausuntoja psykoterapiakoulutusta koskevasta esitysluonnoksesta",
+    "url": "https://stm.fi/-/stm-pyytaa-lausuntoja-psykoterapiakoulutusta-koskevasta-esitysluonnoksesta-",
+    "date": "Julkaisuajankohta:\n7.4.2026 13.06",
+    "summary": "",
+    "scraped_at": "2026-04-12T21:57:01.172823",
+    "source": "stm.fi/ajankohtaista"
+  },
+  {
+    "title": "Lausuntopyyntö: etuuksien valtionosuuksien maksaminen aiotaan yhdenmukaistaa",
+    "url": "https://stm.fi/-/lausuntopyynto-etuuksien-valtionosuuksien-maksaminen-aiotaan-yhdenmukaistaa",
+    "date": "Julkaisuajankohta:\n1.4.2026 16.32",
+    "summary": "",
+    "scraped_at": "2026-04-12T21:57:01.235791",
+    "source": "stm.fi/ajankohtaista"
+  },
+  {
+    "title": "Hallitus esittää vakuutusyhtiöihin liittyviä muutoksia",
+    "url": "https://stm.fi/-/hallitus-esittaa-vakuutusyhtioihin-liittyvia-muutoksia",
+    "date": "Julkaisuajankohta:\n1.4.2026 15.28",
+    "summary": "",
+    "scraped_at": "2026-04-12T21:57:01.298381",
+    "source": "stm.fi/ajankohtaista"
+  },
+  {
+    "title": "Sosiaali- ja terveysministeriö jakaa valtionavustusta eräisiin erityishankkeisiin 2026",
+    "url": "https://stm.fi/-/sosiaali-ja-terveysministerio-jakaa-valtionavustusta-eraisiin-erityishankkeisiin-2026",
+    "date": "Julkaisuajankohta:\n1.4.2026 14.47",
+    "summary": "",
+    "scraped_at": "2026-04-12T21:57:01.357880",
+    "source": "stm.fi/ajankohtaista"
+  },
+  {
+    "title": "Hallitus laajentaisi alkoholijuomien pientuottajien oikeutta myydä tuotteitaan valmistuspaikalta kuluttajille",
+    "url": "https://stm.fi/-/hallitus-laajentaisi-alkoholijuomien-pientuottajien-oikeutta-myyda-tuotteitaan-valmistuspaikalta-kuluttajille",
+    "date": "Julkaisuajankohta:\n1.4.2026 14.11",
+    "summary": "",
+    "scraped_at": "2026-04-12T21:57:01.415626",
+    "source": "stm.fi/ajankohtaista"
+  },
+  {
+    "title": "Parlamentaarinen työryhmä pohjustaa sosiaali- ja terveydenhuollon sekä pelastustoimen palvelujen kehittämistä tulevalla vaalikaudella",
+    "url": "https://stm.fi/-/10623/parlamentaarinen-tyoryhma-pohjustaa-sosiaali-ja-terveydenhuollon-ja-pelastustoimen-palvelujen-kehittamista-tulevalla-vaalikaudella",
+    "date": "Julkaisuajankohta:\n1.4.2026 13.38",
+    "summary": "",
+    "scraped_at": "2026-04-12T21:57:01.477723",
+    "source": "stm.fi/ajankohtaista"
+  },
+  {
+    "title": "Hoidon jatkuvuutta tukevat digitaaliset ratkaisut etenevät",
+    "url": "https://stm.fi/-/hoidon-jatkuvuutta-tukevat-digitaaliset-ratkaisut-etenevat",
+    "date": "Julkaisuajankohta:\n31.3.2026 13.13",
+    "summary": "",
+    "scraped_at": "2026-04-12T21:57:01.538616",
+    "source": "stm.fi/ajankohtaista"
+  },
+  {
+    "title": "STM pyytää lausuntoja apuvälinepalvelujen ohjeistuksen uudistamisesta",
+    "url": "https://stm.fi/-/stm-pyytaa-lausuntoja-apuvalinepalvelujen-ohjeistuksen-uudistamisesta",
+    "date": "Julkaisuajankohta:\n30.3.2026 14.17",
+    "summary": "",
+    "scraped_at": "2026-04-12T21:57:01.604215",
+    "source": "stm.fi/ajankohtaista"
+  },
+  {
+    "title": "Lausuntopyyntö: Sosiaali- ja terveydenhuollon toimijoille velvollisuus ilmoittaa salassa pidettäviä tietoja poliisille henkeen tai terveyteen kohdistuvaan uhkaan liittyen",
+    "url": "https://stm.fi/-/lausuntopyynto-sosiaali-ja-terveydenhuollon-toimijoille-velvollisuus-ilmoittaa-salassa-pidettavia-tietoja-poliisille-henkeen-tai-terveyteen-kohdistuvaan-uhkaan-liittyen",
+    "date": "Julkaisuajankohta:\n30.3.2026 13.08",
+    "summary": "",
+    "scraped_at": "2026-04-12T21:57:01.670506",
+    "source": "stm.fi/ajankohtaista"
+  },
+  {
+    "title": "STM kerää lasten ja nuorten näkemyksiä ja kokemuksia sosiaalisen median käytöstä",
+    "url": "https://stm.fi/-/stm-keraa-lasten-ja-nuorten-nakemyksia-ja-kokemuksia-sosiaalisen-median-kaytosta",
+    "date": "Julkaisuajankohta:\n27.3.2026 13.40",
+    "summary": "",
+    "scraped_at": "2026-04-12T21:57:01.731331",
+    "source": "stm.fi/ajankohtaista"
+  },
+  {
+    "title": "Lausuntopyyntö hyvinvointialueen seuranta- ja arviointivelvollisuudesta sekä vähimmäistiedoista ja vähimmäistietojen hallintamallista",
+    "url": "https://stm.fi/-/lausuntopyynto-hyvinvointialueen-seuranta-ja-arviointivelvollisuudesta-seka-vahimmaistiedoista-ja-vahimmaistietojen-hallintamallista",
+    "date": "Julkaisuajankohta:\n27.3.2026 10.28",
+    "summary": "",
+    "scraped_at": "2026-04-12T21:57:01.794009",
+    "source": "stm.fi/ajankohtaista"
+  },
+  {
+    "title": "Eläkeuudistus etenee eduskuntaan",
+    "url": "https://stm.fi/-/elakeuudistus-etenee-eduskuntaan",
+    "date": "Julkaisuajankohta:\n26.3.2026 14.22",
+    "summary": "",
+    "scraped_at": "2026-04-12T21:57:01.857525",
+    "source": "stm.fi/ajankohtaista"
+  },
+  {
+    "title": "Hallitus esittää muutoksia tasa-arvolakiin raskaus- ja perhevapaasyrjinnän vähentämiseksi",
+    "url": "https://stm.fi/-/hallitus-esittaa-muutoksia-tasa-arvolakiin-raskaus-ja-perhevapaasyrjinnan-vahentamiseksi",
+    "date": "Julkaisuajankohta:\n26.3.2026 13.56",
+    "summary": "",
+    "scraped_at": "2026-04-12T21:57:01.915202",
+    "source": "stm.fi/ajankohtaista"
+  },
+  {
+    "title": "Hallitus pyrkii ehkäisemään nuorten huumekuolemia – STM myönsi 5,85 miljoonaa euroa valtionavustuksia",
+    "url": "https://stm.fi/-/hallitus-pyrkii-ehkaisemaan-nuorten-huumekuolemia-stm-myonsi-5-85-miljoonaa-euroa-valtionavustuksia",
+    "date": "Julkaisuajankohta:\n25.3.2026 16.34",
+    "summary": "",
+    "scraped_at": "2026-04-12T21:57:01.973993",
+    "source": "stm.fi/ajankohtaista"
+  },
+  {
+    "title": "Selvitys: Suomi voi merkittävästi parantaa terveydenhuollon menetelmien arviointitoimintaansa",
+    "url": "https://stm.fi/-/selvitys-suomi-voi-merkittavasti-parantaa-terveydenhuollon-menetelmien-arviointitoimintaansa",
+    "date": "Julkaisuajankohta:\n25.3.2026 9.00",
+    "summary": "",
+    "scraped_at": "2026-04-12T21:57:02.053796",
+    "source": "stm.fi/ajankohtaista"
+  },
+  {
+    "title": "Sosiaali- ja terveydenhuollon henkilöstön kielitaitoa vahvistetaan potilasturvallisuuden parantamiseksi",
+    "url": "https://stm.fi/-/sosiaali-ja-terveydenhuollon-henkiloston-kielitaitoa-vahvistetaan-potilasturvallisuuden-parantamiseksi-",
+    "date": "Julkaisuajankohta:\n23.3.2026 12.36",
+    "summary": "",
+    "scraped_at": "2026-04-12T21:57:02.122250",
+    "source": "stm.fi/ajankohtaista"
+  },
+  {
+    "title": "Sosiaali- ja terveysministeriö myönsi valtionavustusta korkeakouluopiskelijoiden mielenterveyspalvelujen vahvistamiseen",
+    "url": "https://stm.fi/-/sosiaali-ja-terveysministerio-myonsi-valtionavustusta-korkeakouluopiskelijoiden-mielenterveyspalvelujen-vahvistamiseen",
+    "date": "Julkaisuajankohta:\n20.3.2026 13.42",
+    "summary": "",
+    "scraped_at": "2026-04-12T21:57:02.187302",
+    "source": "stm.fi/ajankohtaista"
+  },
+  {
+    "title": "Mahdollisuus hankkia työterveyshuoltopalveluja useammalta palveluntuottajalta antaa vaihtoehtoja ja vastuuttaa",
+    "url": "https://stm.fi/-/mahdollisuus-hankkia-tyoterveyshuoltopalveluja-useammalta-palveluntuottajalta-antaa-vaihtoehtoja-ja-vastuuttaa",
+    "date": "Julkaisuajankohta:\n20.3.2026 11.43",
+    "summary": "",
+    "scraped_at": "2026-04-12T21:57:02.246988",
+    "source": "stm.fi/ajankohtaista"
+  },
+  {
+    "title": "Itsearviointityökalut vauhdittavat ravitsemuksen ja liikuntaneuvonnan kehittämistä",
+    "url": "https://stm.fi/-/itsearviointityokalut-vauhdittavat-ravitsemuksen-ja-liikuntaneuvonnan-kehittamista",
+    "date": "Julkaisuajankohta:\n20.3.2026 11.35",
+    "summary": "",
+    "scraped_at": "2026-04-12T21:57:02.310723",
+    "source": "stm.fi/ajankohtaista"
+  },
+  {
+    "title": "Romanipolitiikan asiantuntija Janette Grönforsille Suomen PEN:in sananvapauspalkinto",
+    "url": "https://stm.fi/-/romanipolitiikan-asiantuntija-janette-gronforsille-suomen-pen-in-sananvapauspalkinto",
+    "date": "Julkaisuajankohta:\n19.3.2026 15.05",
+    "summary": "",
+    "scraped_at": "2026-04-12T21:57:02.371773",
+    "source": "stm.fi/ajankohtaista"
+  },
+  {
+    "title": "Hyvinvointialueiden yhteinen tahtotila: hoidon jatkuvuutta on parannettava",
+    "url": "https://stm.fi/-/hyvinvointialueiden-yhteinen-tahtotila-hoidon-jatkuvuutta-on-parannettava",
+    "date": "Julkaisuajankohta:\n19.3.2026 10.41",
+    "summary": "",
+    "scraped_at": "2026-04-12T21:57:02.432166",
+    "source": "stm.fi/ajankohtaista"
+  },
+  {
+    "title": "Innovaatiotoiminta kuuluu olennaisena osana valtionhallintoon",
+    "url": "https://stm.fi/-/innovaatiotoiminta-kuuluu-olennaisena-osana-valtionhallintoon",
+    "date": "Julkaisuajankohta:\n27.3.2026 8.30",
+    "summary": "",
+    "scraped_at": "2026-04-12T21:57:02.512340",
+    "source": "stm.fi/ajankohtaista"
+  },
+  {
+    "title": "Sosiaali- ja terveydenhuollon tietopohjaa kehitetään pitkäjänteisesti",
+    "url": "https://stm.fi/-/sosiaali-ja-terveydenhuollon-tietopohjaa-kehitetaan-pitkajanteisesti",
+    "date": "Julkaisuajankohta:\n25.3.2026 15.08",
+    "summary": "",
+    "scraped_at": "2026-04-12T21:57:02.569618",
+    "source": "stm.fi/ajankohtaista"
+  },
+  {
+    "title": "Sosiaalihuollon lainsäädäntö uudistuu – tavoitteena sujuvammat palvelut ja parempi arki",
+    "url": "https://stm.fi/-/-sosiaalihuollon-lainsaadanto-uudistuu-tavoitteena-sujuvammat-palvelut-ja-parempi-arki",
+    "date": "Julkaisuajankohta:\n23.3.2026 11.28",
+    "summary": "",
+    "scraped_at": "2026-04-12T21:57:02.629988",
+    "source": "stm.fi/ajankohtaista"
+  },
+  {
+    "title": "Lääketiede ei saa sivuuttaa puolta väestöstä",
+    "url": "https://stm.fi/-/laaketiede-ei-saa-sivuuttaa-puolta-vaestosta",
+    "date": "Julkaisuajankohta:\n19.3.2026 9.29",
+    "summary": "",
+    "scraped_at": "2026-04-12T21:57:02.691961",
+    "source": "stm.fi/ajankohtaista"
+  },
+  {
+    "title": "Sosiaali- ja terveysjärjestöjen työ on tärkeä osa suomalaista hyvinvointiyhteiskuntaa",
+    "url": "https://stm.fi/-/sosiaali-ja-terveysjarjestojen-tyo-on-tarkea-osa-suomalaista-hyvinvointiyhteiskuntaa",
+    "date": "Julkaisuajankohta:\n16.3.2026 13.55",
+    "summary": "",
+    "scraped_at": "2026-04-12T21:57:02.753137",
+    "source": "stm.fi/ajankohtaista"
+  },
+  {
+    "title": "Eläkkeiden yhdistäminen on mahdollista, mutta vaikeaa",
+    "url": "https://stm.fi/-/elakkeiden-yhdistaminen-on-mahdollista-mutta-vaikeaa",
+    "date": "Julkaisuajankohta:\n12.3.2026 15.46",
+    "summary": "",
+    "scraped_at": "2026-04-12T21:57:02.817780",
+    "source": "stm.fi/ajankohtaista"
+  },
+  {
+    "title": "Ulkoapäin tuleva laillisuusvalvonta ei korvaa omavalvontaa",
+    "url": "https://stm.fi/-/ulkoapain-tuleva-laillisuusvalvonta-ei-korvaa-omavalvontaa-2",
+    "date": "Julkaisuajankohta:\n11.3.2026 10.58",
+    "summary": "",
+    "scraped_at": "2026-04-12T21:57:02.878156",
+    "source": "stm.fi/ajankohtaista"
+  },
+  {
+    "title": "Lääkkeiden arviointitoiminnan uudistus jatkuu",
+    "url": "https://stm.fi/-/laakkeiden-arviointitoiminnan-uudistus-jatkuu",
+    "date": "Julkaisuajankohta:\n9.3.2026 15.28",
+    "summary": "",
+    "scraped_at": "2026-04-12T21:57:02.939046",
+    "source": "stm.fi/ajankohtaista"
+  },
+  {
+    "title": "Kiitos sinulle, joka torjut työlläsi naisiin kohdistuvaa väkivaltaa!",
+    "url": "https://stm.fi/-/kiitos-sinulle-joka-torjut-tyollasi-naisiin-kohdistuvaa-vakivaltaa-",
+    "date": "Julkaisuajankohta:\n6.3.2026 15.50",
+    "summary": "",
+    "scraped_at": "2026-04-12T21:57:02.999395",
+    "source": "stm.fi/ajankohtaista"
+  },
+  {
+    "title": "Talouden paineessa, turvallisuutta vahvistaen – STM päivitti strategiansa",
+    "url": "https://stm.fi/-/talouden-paineessa-turvallisuutta-vahvistaen-stm-paivitti-strategiansa",
+    "date": "Julkaisuajankohta:\n4.3.2026 8.40",
+    "summary": "",
+    "scraped_at": "2026-04-12T21:57:03.059978",
+    "source": "stm.fi/ajankohtaista"
+  },
+  {
+    "title": "Riittävä tuki opetukselle, vahvempi kansallinen ohjaus ja koulutuksen hajautus ratkaisuja lääkäripulaan",
+    "url": "https://stm.fi/-/riittava-tuki-opetukselle-vahvempi-kansallinen-ohjaus-ja-koulutuksen-hajautus-ratkaisuja-laakaripulaan",
+    "date": "Julkaisuajankohta:\n27.2.2026 14.38",
+    "summary": "",
+    "scraped_at": "2026-04-12T21:57:03.122141",
+    "source": "stm.fi/ajankohtaista"
+  },
+  {
+    "title": "Kun numerot puhuvat – mitä hyvinvointialueiden tilasta pitäisi ymmärtää?",
+    "url": "https://stm.fi/-/kun-numerot-puhuvat-mita-hyvinvointialueiden-tilasta-pitaisi-ymmartaa-",
+    "date": "Julkaisuajankohta:\n19.2.2026 9.00",
+    "summary": "",
+    "scraped_at": "2026-04-12T21:57:03.179201",
+    "source": "stm.fi/ajankohtaista"
+  },
+  {
+    "title": "Yritykset avainasemassa reilun työelämän rakentamisessa",
+    "url": "https://stm.fi/-/yritykset-avainasemassa-reilun-tyoelaman-rakentamisessa",
+    "date": "Julkaisuajankohta:\n19.1.2026 9.11",
+    "summary": "",
+    "scraped_at": "2026-04-12T21:57:03.240579",
+    "source": "stm.fi/ajankohtaista"
+  },
+  {
+    "title": "Sosiaaliturvaa uudistetaan yksinkertaisemmaksi ja kannustavammaksi samalla turvaten hyvinvointivaltion kestävyyttä",
+    "url": "https://stm.fi/-/sosiaaliturvaa-uudistetaan-yksinkertaisemmaksi-ja-kannustavammaksi-samalla-turvaten-hyvinvointivaltion-kestavyytta",
+    "date": "Julkaisuajankohta:\n16.1.2026 8.00",
+    "summary": "",
+    "scraped_at": "2026-04-12T21:57:03.298614",
+    "source": "stm.fi/ajankohtaista"
+  },
+  {
+    "title": "Valtion on pystyttävä parempaan hyvinvointialueiden ohjaukseen",
+    "url": "https://stm.fi/-/valtion-on-pystyttava-parempaan-hyvinvointialueiden-ohjaukseen",
+    "date": "Julkaisuajankohta:\n12.12.2025 15.01",
+    "summary": "",
+    "scraped_at": "2026-04-12T21:57:03.354200",
+    "source": "stm.fi/ajankohtaista"
+  },
+  {
+    "title": "Hallituksen esitys eduskunnalle Kansaneläkelaitoksen tietojenvaihtoa koskevan lainsäädännön muuttamiseksi",
+    "url": "https://stm.fi/ajankohtaista/paatos?decisionId=6043",
+    "date": "Julkaisuajankohta:\n9.4.2026 13.00",
+    "summary": "",
+    "scraped_at": "2026-04-12T21:57:03.434264",
+    "source": "stm.fi/ajankohtaista"
+  },
+  {
+    "title": "Hallituksen esitys eduskunnalle laiksi alkoholilain muuttamisesta",
+    "url": "https://stm.fi/ajankohtaista/paatos?decisionId=5978",
+    "date": "Julkaisuajankohta:\n1.4.2026 13.00",
+    "summary": "",
+    "scraped_at": "2026-04-12T21:57:03.481858",
+    "source": "stm.fi/ajankohtaista"
+  },
+  {
+    "title": "Hallituksen esitys eduskunnalle laiksi vakuutusyhtiölain muuttamisesta ja eräiksi siihen liittyviksi laeiksi",
+    "url": "https://stm.fi/ajankohtaista/paatos?decisionId=6048",
+    "date": "Julkaisuajankohta:\n1.4.2026 13.00",
+    "summary": "",
+    "scraped_at": "2026-04-12T21:57:03.529953",
+    "source": "stm.fi/ajankohtaista"
+  },
+  {
+    "title": "Hallituksen esitys eduskunnalle laiksi naisten ja miesten välisestä tasa-arvosta annetun lain muuttamisesta",
+    "url": "https://stm.fi/ajankohtaista/paatos?decisionId=5964",
+    "date": "Julkaisuajankohta:\n26.3.2026 13.00",
+    "summary": "",
+    "scraped_at": "2026-04-12T21:57:03.579489",
+    "source": "stm.fi/ajankohtaista"
+  },
+  {
+    "title": "Hallituksen esitys eduskunnalle työeläkejärjestelmää koskevan lainsäädännön muuttamiseksi",
+    "url": "https://stm.fi/ajankohtaista/paatos?decisionId=5959",
+    "date": "Julkaisuajankohta:\n26.3.2026 13.00",
+    "summary": "",
+    "scraped_at": "2026-04-12T21:57:03.628254",
+    "source": "stm.fi/ajankohtaista"
+  },
+  {
+    "title": "Mielitekoja työssä - Yhteistyöllä vähemmän poissaoloja ja enemmän tuottavuutta 21.4.2026",
+    "url": "https://stm.fi/tapahtumat/2026-04-21/mielitekoja-tyossa-yhteistyolla-vahemman-poissaoloja-ja-enemman-tuottavuutta-21.4.2026",
+    "date": "Tapahtuman alkamispäivämäärä:\n21.4.",
+    "summary": "",
+    "scraped_at": "2026-04-12T21:57:03.690058",
+    "source": "stm.fi/ajankohtaista"
+  },
+  {
+    "title": "Kyberturvallisuuden ja riskienhallinnan päivät",
+    "url": "https://stm.fi/tapahtumat/2026-05-18/kyberturvallisuuden-ja-riskienhallinnan-paivat",
+    "date": "Tapahtuman alkamispäivämäärä:\n18. - \nTapahtuman päättymispäivämäärä:\n19.5.",
+    "summary": "",
+    "scraped_at": "2026-04-12T21:57:03.739261",
+    "source": "stm.fi/ajankohtaista"
+  }
+]

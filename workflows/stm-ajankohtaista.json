@@ -1,0 +1,276 @@
+{
+  "name": "stm-ajankohtaista",
+  "nodes": [
+    {
+      "parameters": {
+        "url": "http://204.168.136.252:8001/stm-ajankohtaista.json",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [
+        -32,
+        -96
+      ],
+      "id": "996a700f-9282-48f1-9b6f-f0245a632cf3",
+      "name": "Ajankohtaiset Kela Json"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "e734affe-aada-4712-82cb-d2f268bbc010",
+              "leftValue": "={{ $json.date }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "notEmpty",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.filter",
+      "typeVersion": 2.3,
+      "position": [
+        160,
+        -112
+      ],
+      "id": "48d5d857-358c-49e8-b6ba-98f523a53382",
+      "name": "Filter"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -528,
+        -96
+      ],
+      "id": "19c9877c-ff75-4e68-accb-6e8c61b1577b",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 2,
+      "position": [
+        -240,
+        -96
+      ],
+      "id": "debed4f8-91f9-4de7-99ed-e5390618ebd9",
+      "name": "Date & Time"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Tänään on {{ $('Date & Time').item.json.currentDate }} Tässä ajankohtaisia sosiaali ja tervysministeriö sivuilta:\nLinkki:\n{{ $json.url }}\notsikko\n{{ $json.title }}\njulkaisuajankohta:\n{{ $json.date }}",
+        "messages": {
+          "messageValues": [
+            {
+              "message": "Olet Kontiolahden työttömien ry ja kontiotuvan avustaja, analysoi, ja tee hallinnolle selonteko. Käytetään sisäisessä viestinnässä,  ja ideoinnissa, ajankohtaisien asioiden äärellä.  Kontiolahden Työttömät ry:n tavoite on työttömien olojen parantaminen. Yhdistys järjestää monenlaista toimintaa ja tapahtumia. Varsinaisiksi jäseniksi voivat liittyä työttömät, ja kannattajajäseniksi kaikki muut. Yhdistyksen tarkoitus on työttömyyden vähentäminen ja poistaminen, työttömien toimeentulon parantaminen, sekä henkisen ja fyysisen hyvinvoinnin kohottaminen. Yhdistys järjestää työttömien omaehtoista toimintaa, neuvontapalveluita, tiedotus- ja julkaisutoimintaa, infotilaisuuksia, kursseja, harrastus- ja virkistystoimintaa.  Yhdistyksen näkyvintä toimintaa on kierrätyskeskus Töpinän Tori osoitteessa Keskuskatu 21 ja kaikkien kuntalaisten yhteinen kohtaamispaikka Kontiotupa osoitteessa Koulukuja 4 A.  KOHTAAMISPAIKKA KONTIOTUPA ON KAIKKIEN KUNTALAISTEN OLOHUONE (Koulukuja 4 A) Kontiotupa on avoinna ti-pe klo 9-14.30. Kontiotupa toimii kohtaamispaikkana eri ikäryhmille, se on kuntalaisten yhteinen ”olohuone”. Tuvalta löydät päivän lehdet, kahvia ja kahviseuraa, pelejä, nettinurkkauksen ja television. Kontiotupa on myös yhdistysten kokoontumispaikka, omine kaappi- ja säilytystiloineen sekä välineineen. Tuvalla on myös mahdollisuus järjestää ryhmätoimintoja. Kontiotuvalta löydät tietoa Kontiolahdella ja muualla toimivien hyvinvointialan yhdistyksistä ja yrityksistä ja yhteyshenkilöistä. Kontiotuvalla on tarjolla vapaaehtoistoimintaa ja mahdollisuuksia vapaaehtois- ja vertaishenkilökoulutuksiin. Varauskalenterista  yhdistykset voivat varata tiloja kokous- ja koulutuskäyttöön, sekä ryhmätoimintojen järjestämiseen.   ANNA vastaus aina tässä  JSON muodossa:   {   \"Otsikko\": \"anna sopiva otsikko\",   \"ingressi\": \"lyhyt kuvaus aiheesta\",   \"sisältö\": \"anna html-formatoitu teksti\",   \"slug\": \"kuvaava lyhyt pääte artikkelin slugiksi\" }"
+            }
+          ]
+        },
+        "batching": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.9,
+      "position": [
+        544,
+        -112
+      ],
+      "id": "623dfb39-befd-47a5-a287-31eac4497757",
+      "name": "Basic LLM Chain"
+    },
+    {
+      "parameters": {
+        "fieldsToAggregate": {
+          "fieldToAggregate": [
+            {
+              "fieldToAggregate": "title"
+            },
+            {
+              "fieldToAggregate": "url"
+            },
+            {
+              "fieldToAggregate": "date"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.aggregate",
+      "typeVersion": 1,
+      "position": [
+        352,
+        -96
+      ],
+      "id": "029975b5-6601-4ff3-a4c1-3970050e27b7",
+      "name": "Aggregate"
+    },
+    {
+      "parameters": {
+        "model": "grok-4-1-fast-reasoning",
+        "options": {
+          "responseFormat": "json_object"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatXAiGrok",
+      "typeVersion": 1,
+      "position": [
+        480,
+        96
+      ],
+      "id": "751df695-84d6-4082-ad91-b641e17c3ab6",
+      "name": "xAI Grok Chat Model",
+      "credentials": {
+        "xAiApi": {
+          "id": "of5ntIPBrs6V9HI1",
+          "name": "xAi account -henkilökohtainen"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "channelMessage",
+        "teamId": {
+          "__rl": true,
+          "value": "4702b037-3844-4570-b7a6-584e7daf0077",
+          "mode": "list",
+          "cachedResultName": "Kontiotupa"
+        },
+        "channelId": {
+          "__rl": true,
+          "value": "19:7f48746d7a2e45959ba1e8021bf54922@thread.tacv2",
+          "mode": "list",
+          "cachedResultName": "Tiedotteet ja tapahtumat",
+          "cachedResultUrl": "https://teams.cloud.microsoft/l/channel/19%3A7f48746d7a2e45959ba1e8021bf54922%40thread.tacv2/Tiedotteet%20ja%20tapahtumat?groupId=4702b037-3844-4570-b7a6-584e7daf0077&tenantId=a3cbdf44-9a93-4c90-864f-9bf52cd2f348&allowXTenantAccess=False"
+        },
+        "contentType": "html",
+        "message": "={{ $json.Otsikko }}\n\n{{ $json.ingressi }}\n\n{{ $json['sisältö'] }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.microsoftTeams",
+      "typeVersion": 2,
+      "position": [
+        896,
+        -112
+      ],
+      "id": "9aa96dc9-afb7-471f-9845-6c27f223d1b4",
+      "name": "Create message",
+      "webhookId": "082ad1e7-8584-4af8-9ec1-a36bd3096f16",
+      "credentials": {
+        "microsoftTeamsOAuth2Api": {
+          "id": "p9ZytgOjCDjlcrku",
+          "name": "Microsoft Teams account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Ajankohtaiset Kela Json": {
+      "main": [
+        [
+          {
+            "node": "Filter",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "Date & Time",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Date & Time": {
+      "main": [
+        [
+          {
+            "node": "Ajankohtaiset Kela Json",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Filter": {
+      "main": [
+        [
+          {
+            "node": "Aggregate",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Aggregate": {
+      "main": [
+        [
+          {
+            "node": "Basic LLM Chain",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "xAI Grok Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Basic LLM Chain",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Basic LLM Chain": {
+      "main": [
+        [
+          {
+            "node": "Create message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "availableInMCP": false
+  },
+  "versionId": "54a12988-f0ba-4114-b9f6-86e27938ce32",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "8837899abd9f86e2b65faef279502f26a61fb5a42b75296b8b4689051c6b02ef"
+  },
+  "id": "IqeORUp5ZHXgsEr6",
+  "tags": []
+}

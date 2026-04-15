@@ -1,0 +1,233 @@
+{
+  "name": "Kela ajankohtaiset rss",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "675e31c8-c1d2-4104-a5ca-8faa03821d84",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "url": "http://204.168.136.252:8001/kela_ajankohtaista.json",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [
+        320,
+        16
+      ],
+      "id": "ebb647ea-e8fb-4a04-a841-6058c7c566cc",
+      "name": "Ajankohtaiset Kela Json"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Tänään on {{ $('Date & Time').item.json.currentDate }} Tässä ajankohtaisia Kela.fi palvelusta:\nLinkki:\n{{ $json.linkki }}\notsikko:\n{{ $json.otsikko }}\nPäivä\n{{ $json.paiva }}\n",
+        "messages": {
+          "messageValues": [
+            {
+              "message": "Olet Kontiolahden työttömien ry ja kontiotuvan avustaja, analysoi, ja tee hallinnolle selonteko. Käytetään sisäisessä viestinnässä,  ja ideoinnissa, ajankohtaisien asioiden äärellä.\n\nKontiolahden Työttömät ry:n tavoite on työttömien olojen parantaminen. Yhdistys järjestää monenlaista toimintaa ja tapahtumia. Varsinaisiksi jäseniksi voivat liittyä työttömät, ja kannattajajäseniksi kaikki muut. Yhdistyksen tarkoitus on työttömyyden vähentäminen ja poistaminen, työttömien toimeentulon parantaminen, sekä henkisen ja fyysisen hyvinvoinnin kohottaminen. Yhdistys järjestää työttömien omaehtoista toimintaa, neuvontapalveluita, tiedotus- ja julkaisutoimintaa, infotilaisuuksia, kursseja, harrastus- ja virkistystoimintaa.\n\nYhdistyksen näkyvintä toimintaa on kierrätyskeskus Töpinän Tori osoitteessa Keskuskatu 21 ja kaikkien kuntalaisten yhteinen kohtaamispaikka Kontiotupa osoitteessa Koulukuja 4 A.\n\nKOHTAAMISPAIKKA KONTIOTUPA ON KAIKKIEN KUNTALAISTEN OLOHUONE\n(Koulukuja 4 A)\nKontiotupa on avoinna ti-pe klo 9-14.30.\nKontiotupa toimii kohtaamispaikkana eri ikäryhmille, se on kuntalaisten yhteinen ”olohuone”. Tuvalta löydät päivän lehdet, kahvia ja kahviseuraa, pelejä, nettinurkkauksen ja television.\nKontiotupa on myös yhdistysten kokoontumispaikka, omine kaappi- ja säilytystiloineen sekä välineineen. Tuvalla on myös mahdollisuus järjestää ryhmätoimintoja. Kontiotuvalta löydät tietoa Kontiolahdella ja muualla toimivien hyvinvointialan yhdistyksistä ja yrityksistä ja yhteyshenkilöistä.\nKontiotuvalla on tarjolla vapaaehtoistoimintaa ja mahdollisuuksia vapaaehtois- ja vertaishenkilökoulutuksiin.\nVarauskalenterista  yhdistykset voivat varata tiloja kokous- ja koulutuskäyttöön, sekä ryhmätoimintojen järjestämiseen. \n\nANNA vastaus aina tässä  JSON muodossa: \n\n{\n  \"Otsikko\": \"anna sopiva otsikko\",\n  \"ingressi\": \"lyhyt kuvaus aiheesta\",\n  \"sisältö\": \"anna html-formatoitu teksti\",\n  \"slug\": \"kuvaava lyhyt pääte artikkelin slugiksi\"\n}\n"
+            }
+          ]
+        },
+        "batching": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.9,
+      "position": [
+        832,
+        0
+      ],
+      "id": "3e16a60a-2d1f-470c-b8ee-93577a5d2c2a",
+      "name": "Basic LLM Chain"
+    },
+    {
+      "parameters": {
+        "fieldsToAggregate": {
+          "fieldToAggregate": [
+            {
+              "fieldToAggregate": "linkki"
+            },
+            {
+              "fieldToAggregate": "otsikko"
+            },
+            {
+              "fieldToAggregate": "paiva"
+            },
+            {
+              "fieldToAggregate": "haettu"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.aggregate",
+      "typeVersion": 1,
+      "position": [
+        624,
+        0
+      ],
+      "id": "ee638a1b-5ffc-4dd7-9049-b0069fc2b7e6",
+      "name": "Aggregate"
+    },
+    {
+      "parameters": {
+        "model": "grok-4-fast-reasoning",
+        "options": {
+          "responseFormat": "json_object"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatXAiGrok",
+      "typeVersion": 1,
+      "position": [
+        768,
+        208
+      ],
+      "id": "4c46743a-f75d-4f0f-af89-625e7a4d1e63",
+      "name": "xAI Grok Chat Model",
+      "credentials": {
+        "xAiApi": {
+          "id": "of5ntIPBrs6V9HI1",
+          "name": "xAi account -henkilökohtainen"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "channelMessage",
+        "teamId": {
+          "__rl": true,
+          "value": "4702b037-3844-4570-b7a6-584e7daf0077",
+          "mode": "list",
+          "cachedResultName": "Kontiotupa"
+        },
+        "channelId": {
+          "__rl": true,
+          "value": "19:7f48746d7a2e45959ba1e8021bf54922@thread.tacv2",
+          "mode": "list",
+          "cachedResultName": "Tiedotteet ja tapahtumat",
+          "cachedResultUrl": "https://teams.cloud.microsoft/l/channel/19%3A7f48746d7a2e45959ba1e8021bf54922%40thread.tacv2/Tiedotteet%20ja%20tapahtumat?groupId=4702b037-3844-4570-b7a6-584e7daf0077&tenantId=a3cbdf44-9a93-4c90-864f-9bf52cd2f348&allowXTenantAccess=False"
+        },
+        "message": "={{ $json.Otsikko }}\n\n{{ $json.ingressi }}\n\n{{ $json['sisältö'] }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.microsoftTeams",
+      "typeVersion": 2,
+      "position": [
+        1184,
+        0
+      ],
+      "id": "e0b63064-f3ce-4026-ba93-aae3669bb189",
+      "name": "Create message",
+      "webhookId": "ce0ffc01-7bf5-4fb7-b336-df147b5f9d2b",
+      "credentials": {
+        "microsoftTeamsOAuth2Api": {
+          "id": "p9ZytgOjCDjlcrku",
+          "name": "Microsoft Teams account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 2,
+      "position": [
+        96,
+        176
+      ],
+      "id": "3e89f2df-d754-46a7-9119-d7d2847638f6",
+      "name": "Date & Time"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "Date & Time",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ajankohtaiset Kela Json": {
+      "main": [
+        [
+          {
+            "node": "Aggregate",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Aggregate": {
+      "main": [
+        [
+          {
+            "node": "Basic LLM Chain",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "xAI Grok Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Basic LLM Chain",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Basic LLM Chain": {
+      "main": [
+        [
+          {
+            "node": "Create message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Date & Time": {
+      "main": [
+        [
+          {
+            "node": "Ajankohtaiset Kela Json",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "availableInMCP": false
+  },
+  "versionId": "59b512b7-2e3a-4169-b974-ebc42a8b041f",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "8837899abd9f86e2b65faef279502f26a61fb5a42b75296b8b4689051c6b02ef"
+  },
+  "id": "d7NohW73kbRiQe0H",
+  "tags": []
+}

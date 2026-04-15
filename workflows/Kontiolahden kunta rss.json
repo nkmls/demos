@@ -1,0 +1,230 @@
+{
+  "name": "Kontiolahden kunta rss",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "b0601346-5424-45f5-a253-6bb3d8a85bf3",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "url": "https://dynastyjulkaisu.pohjoiskarjala.net/kontiolahti/cgi/DREQUEST.PHP?page=rss/meetingitems&show=30",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        416,
+        0
+      ],
+      "id": "a5859c3f-db59-4c43-95fe-4faca9d8807f",
+      "name": "RSS Read"
+    },
+    {
+      "parameters": {
+        "fieldsToAggregate": {
+          "fieldToAggregate": [
+            {
+              "fieldToAggregate": "title"
+            },
+            {
+              "fieldToAggregate": "content"
+            },
+            {
+              "fieldToAggregate": "link"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.aggregate",
+      "typeVersion": 1,
+      "position": [
+        624,
+        0
+      ],
+      "id": "58d344e4-da01-4f80-b8e6-bb7750c0385f",
+      "name": "Aggregate"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Tänään on {{ $('Date & Time').item.json.currentDate }} Tässä ajankohtaisia Kontiolahden kunnan toimielimistä Dynasty tietopalvelusta:\nLinkki:\n{{ $json.link }}\nsisältö:\n{{ $json.content }}\notsikko\n{{ $json.title }}",
+        "messages": {
+          "messageValues": [
+            {
+              "message": "Olet Kontiolahden työttömien ry ja kontiotuvan avustaja, analysoi, ja tee hallinnolle selonteko. Käytetään sisäisessä viestinnässä,  ja ideoinnissa, ajankohtaisien asioiden äärellä.  Kontiolahden Työttömät ry:n tavoite on työttömien olojen parantaminen. Yhdistys järjestää monenlaista toimintaa ja tapahtumia. Varsinaisiksi jäseniksi voivat liittyä työttömät, ja kannattajajäseniksi kaikki muut. Yhdistyksen tarkoitus on työttömyyden vähentäminen ja poistaminen, työttömien toimeentulon parantaminen, sekä henkisen ja fyysisen hyvinvoinnin kohottaminen. Yhdistys järjestää työttömien omaehtoista toimintaa, neuvontapalveluita, tiedotus- ja julkaisutoimintaa, infotilaisuuksia, kursseja, harrastus- ja virkistystoimintaa.  Yhdistyksen näkyvintä toimintaa on kierrätyskeskus Töpinän Tori osoitteessa Keskuskatu 21 ja kaikkien kuntalaisten yhteinen kohtaamispaikka Kontiotupa osoitteessa Koulukuja 4 A.  KOHTAAMISPAIKKA KONTIOTUPA ON KAIKKIEN KUNTALAISTEN OLOHUONE (Koulukuja 4 A) Kontiotupa on avoinna ti-pe klo 9-14.30. Kontiotupa toimii kohtaamispaikkana eri ikäryhmille, se on kuntalaisten yhteinen ”olohuone”. Tuvalta löydät päivän lehdet, kahvia ja kahviseuraa, pelejä, nettinurkkauksen ja television. Kontiotupa on myös yhdistysten kokoontumispaikka, omine kaappi- ja säilytystiloineen sekä välineineen. Tuvalla on myös mahdollisuus järjestää ryhmätoimintoja. Kontiotuvalta löydät tietoa Kontiolahdella ja muualla toimivien hyvinvointialan yhdistyksistä ja yrityksistä ja yhteyshenkilöistä. Kontiotuvalla on tarjolla vapaaehtoistoimintaa ja mahdollisuuksia vapaaehtois- ja vertaishenkilökoulutuksiin. Varauskalenterista  yhdistykset voivat varata tiloja kokous- ja koulutuskäyttöön, sekä ryhmätoimintojen järjestämiseen.   ANNA vastaus aina tässä  JSON muodossa:   {   \"Otsikko\": \"anna sopiva otsikko\",   \"ingressi\": \"lyhyt kuvaus aiheesta\",   \"sisältö\": \"anna html-formatoitu teksti\",   \"slug\": \"kuvaava lyhyt pääte artikkelin slugiksi\" }"
+            }
+          ]
+        },
+        "batching": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.9,
+      "position": [
+        832,
+        0
+      ],
+      "id": "98b79c72-bd7d-419d-a5ca-c74f1c23f887",
+      "name": "Basic LLM Chain"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 2,
+      "position": [
+        208,
+        0
+      ],
+      "id": "e2c07343-65f2-487c-bef0-30e8825be2ec",
+      "name": "Date & Time"
+    },
+    {
+      "parameters": {
+        "model": "grok-4-1-fast-reasoning",
+        "options": {
+          "responseFormat": "json_object"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatXAiGrok",
+      "typeVersion": 1,
+      "position": [
+        768,
+        208
+      ],
+      "id": "bff1713b-4708-46cd-8ac2-a50f759ce38f",
+      "name": "xAI Grok Chat Model",
+      "credentials": {
+        "xAiApi": {
+          "id": "of5ntIPBrs6V9HI1",
+          "name": "xAi account -henkilökohtainen"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "channelMessage",
+        "teamId": {
+          "__rl": true,
+          "value": "4702b037-3844-4570-b7a6-584e7daf0077",
+          "mode": "list",
+          "cachedResultName": "Kontiotupa"
+        },
+        "channelId": {
+          "__rl": true,
+          "value": "19:7f48746d7a2e45959ba1e8021bf54922@thread.tacv2",
+          "mode": "list",
+          "cachedResultName": "Tiedotteet ja tapahtumat",
+          "cachedResultUrl": "https://teams.cloud.microsoft/l/channel/19%3A7f48746d7a2e45959ba1e8021bf54922%40thread.tacv2/Tiedotteet%20ja%20tapahtumat?groupId=4702b037-3844-4570-b7a6-584e7daf0077&tenantId=a3cbdf44-9a93-4c90-864f-9bf52cd2f348&allowXTenantAccess=False"
+        },
+        "message": "={{ $json.Otsikko }}\n\n{{ $json.ingressi }}\n\n{{ $json['sisältö'] }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.microsoftTeams",
+      "typeVersion": 2,
+      "position": [
+        1184,
+        0
+      ],
+      "id": "27d74b74-e25a-4248-a5be-b07f3e49593e",
+      "name": "Create message",
+      "webhookId": "dfd9c63e-d04e-43e8-abb3-b7ae7fa4ca9c",
+      "credentials": {
+        "microsoftTeamsOAuth2Api": {
+          "id": "p9ZytgOjCDjlcrku",
+          "name": "Microsoft Teams account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "Date & Time",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "RSS Read": {
+      "main": [
+        [
+          {
+            "node": "Aggregate",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Aggregate": {
+      "main": [
+        [
+          {
+            "node": "Basic LLM Chain",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Date & Time": {
+      "main": [
+        [
+          {
+            "node": "RSS Read",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "xAI Grok Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Basic LLM Chain",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Basic LLM Chain": {
+      "main": [
+        [
+          {
+            "node": "Create message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "availableInMCP": false
+  },
+  "versionId": "49a2d372-f694-4ec4-912f-20fdefd8be6d",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "8837899abd9f86e2b65faef279502f26a61fb5a42b75296b8b4689051c6b02ef"
+  },
+  "id": "Cb3cjRTOHoWtYpmj",
+  "tags": []
+}

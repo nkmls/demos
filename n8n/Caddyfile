@@ -1,0 +1,13 @@
+{
+    email 
+}
+
+n8n.kontiolahdentyottomat.fi {
+    reverse_proxy n8n:5678 {
+        flush_interval -1
+    }
+}
+
+rss.kontiolahdentyottomat.fi {
+    reverse_proxy rss-bridge:80
+}

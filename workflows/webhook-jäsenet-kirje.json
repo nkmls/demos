@@ -1,0 +1,535 @@
+{
+  "name": "webhook-jäsenet-kirje",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "8672d409-cc61-4460-88bc-ce04ad0cc5c2",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        240,
+        -32
+      ],
+      "id": "ec833162-a16f-4779-9633-ba3ef93464cb",
+      "name": "Webhook",
+      "webhookId": "8672d409-cc61-4460-88bc-ce04ad0cc5c2"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "ffef66bb-fe56-4c3c-ae7f-fa5d0904983e",
+              "name": "body.nimi",
+              "value": "={{ $('Webhook').item.json.body.nimi }}",
+              "type": "string"
+            },
+            {
+              "id": "88759d14-078e-4ed8-bf5e-fc8c32421b3f",
+              "name": "body.email",
+              "value": "={{ $('Webhook').item.json.body.email }}",
+              "type": "string"
+            },
+            {
+              "id": "5d16f52d-8981-4d56-a2b4-ebd63803d076",
+              "name": "body.puhelin",
+              "value": "={{ $('Webhook').item.json.body.puhelin }}",
+              "type": "string"
+            },
+            {
+              "id": "94c8d3dd-ea81-48fb-8e01-7c76903e7c9c",
+              "name": "body.kommentti",
+              "value": "={{ $('Webhook').item.json.body.kommentti }}",
+              "type": "string"
+            },
+            {
+              "id": "45464f1d-afc6-4178-926b-a8676de4a929",
+              "name": "body.haluan_jaseneksi",
+              "value": "={{ $('Webhook').item.json.body.haluan_jaseneksi }}",
+              "type": "string"
+            },
+            {
+              "id": "a044b90a-3f23-49a1-b5bd-accd01a4c3de",
+              "name": "body.haluan_jasenkirjeen",
+              "value": "={{ $('Webhook').item.json.body.haluan_jasenkirjeen }}",
+              "type": "string"
+            },
+            {
+              "id": "91cccc1c-1ccd-41c0-9a1b-8a32d761ce98",
+              "name": "body.suostumus",
+              "value": "={{ $('Webhook').item.json.body.suostumus }}",
+              "type": "boolean"
+            },
+            {
+              "id": "952f8dcd-47d2-4bfa-91ee-2c13a4d998b4",
+              "name": "currentDate",
+              "value": "={{ $json.currentDate }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        608,
+        -32
+      ],
+      "id": "47ebd83e-ac2c-491d-98b1-79ecf6f130a9",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "0240cd88-4ddf-40f9-aa44-1ec29a68696f",
+              "leftValue": "={{ $json.body.haluan_jasenkirjeen.toBoolean() }}",
+              "rightValue": true,
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        784,
+        -240
+      ],
+      "id": "e19ad6ee-80db-47f3-a7e4-38ca38572432",
+      "name": "If - jäsenkirje"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "891b0fec-3a6c-4ce6-a8e9-249fe8f3ccbf",
+              "leftValue": "={{ $json.body.haluan_jaseneksi.toBoolean() }}",
+              "rightValue": false,
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        992,
+        0
+      ],
+      "id": "34398feb-d0d0-4041-b3aa-e750461f30c4",
+      "name": "If - jäseneksi"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "891b0fec-3a6c-4ce6-a8e9-249fe8f3ccbf",
+              "leftValue": "={{ $json.body.haluan_jaseneksi.toBoolean() }}",
+              "rightValue": false,
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        992,
+        -416
+      ],
+      "id": "457c36bf-8eb1-4ab4-85aa-6fec266c8b15",
+      "name": "If - jäseneksi2"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "bacaaace-2a0e-4464-bf76-ad2864e74f37",
+              "name": "body.nimi",
+              "value": "={{ $json.body.nimi }}",
+              "type": "string"
+            },
+            {
+              "id": "cfaf6108-6d0d-4bbe-a1bf-d601e30f0f20",
+              "name": "body.email",
+              "value": "={{ $json.body.email }}",
+              "type": "string"
+            },
+            {
+              "id": "25d87949-ad12-4ac8-a81c-46ba587e3d89",
+              "name": "body.haluan_jaseneksi",
+              "value": "={{ $json.body.haluan_jaseneksi }}",
+              "type": "boolean"
+            },
+            {
+              "id": "d6079da3-2dea-4623-a7a0-d66e9b4aa4e3",
+              "name": "body.haluan_jasenkirjeen",
+              "value": "={{ $json.body.haluan_jasenkirjeen }}",
+              "type": "boolean"
+            },
+            {
+              "id": "3b789e6d-5fec-4db7-8e09-5ac2bbe261d5",
+              "name": "body.puhelin",
+              "value": "={{ $json.body.puhelin }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1232,
+        -544
+      ],
+      "id": "268aff37-3c95-4720-a359-b948e30cc3a9",
+      "name": "Edit Fields1"
+    },
+    {
+      "parameters": {
+        "resource": "worksheet",
+        "operation": "append",
+        "workbook": {
+          "__rl": true,
+          "value": "01N3H5JFUJSMMCZCWQDBB36S7K3HYR6IOW",
+          "mode": "list",
+          "cachedResultName": "jasenilmoittautuminen",
+          "cachedResultUrl": "https://kontiotupa-my.sharepoint.com/personal/hallinto_kontiolahdentyottomat_fi/_layouts/15/Doc.aspx?sourcedoc=%7B2C189389-D08A-4318-BF4B-EAD9F11F21D6%7D&file=jasenilmoittautuminen.xlsx&action=default&mobileredirect=true&DefaultItemOpen=1"
+        },
+        "worksheet": {
+          "__rl": true,
+          "value": "{00000000-0001-0000-0000-000000000000}",
+          "mode": "list",
+          "cachedResultName": "Taul1",
+          "cachedResultUrl": "https://kontiotupa-my.sharepoint.com/personal/hallinto_kontiolahdentyottomat_fi/_layouts/15/Doc.aspx?sourcedoc=%7B2C189389-D08A-4318-BF4B-EAD9F11F21D6%7D&file=jasenilmoittautuminen.xlsx&action=default&mobileredirect=true&DefaultItemOpen=1&activeCell=Taul1!A1"
+        },
+        "fieldsUi": {
+          "values": [
+            {
+              "column": "Nimi",
+              "fieldValue": "={{ $json.body.nimi }}"
+            },
+            {
+              "column": "email",
+              "fieldValue": "={{ $json.body.email }}"
+            },
+            {
+              "column": "puhelin",
+              "fieldValue": "={{ $json.body.puhelin }}"
+            },
+            {
+              "column": "jäseneksi",
+              "fieldValue": "={{ $json.body.haluan_jaseneksi }}"
+            },
+            {
+              "column": "uutiskirje",
+              "fieldValue": "={{ $json.body.haluan_jasenkirjeen }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.microsoftExcel",
+      "typeVersion": 2.2,
+      "position": [
+        1488,
+        -544
+      ],
+      "id": "b8fc7c28-3fc8-486d-8acd-d94aa94ecd92",
+      "name": "Append data to sheet",
+      "credentials": {
+        "microsoftExcelOAuth2Api": {
+          "id": "kFWdlzZKFnlesS5Y",
+          "name": "Microsoft Excel account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "worksheet",
+        "operation": "append",
+        "workbook": {
+          "__rl": true,
+          "value": "01N3H5JFUJSMMCZCWQDBB36S7K3HYR6IOW",
+          "mode": "list",
+          "cachedResultName": "jasenilmoittautuminen",
+          "cachedResultUrl": "https://kontiotupa-my.sharepoint.com/personal/hallinto_kontiolahdentyottomat_fi/_layouts/15/Doc.aspx?sourcedoc=%7B2C189389-D08A-4318-BF4B-EAD9F11F21D6%7D&file=jasenilmoittautuminen.xlsx&action=default&mobileredirect=true&DefaultItemOpen=1"
+        },
+        "worksheet": {
+          "__rl": true,
+          "value": "{00000000-0001-0000-0000-000000000000}",
+          "mode": "list",
+          "cachedResultName": "Taul1",
+          "cachedResultUrl": "https://kontiotupa-my.sharepoint.com/personal/hallinto_kontiolahdentyottomat_fi/_layouts/15/Doc.aspx?sourcedoc=%7B2C189389-D08A-4318-BF4B-EAD9F11F21D6%7D&file=jasenilmoittautuminen.xlsx&action=default&mobileredirect=true&DefaultItemOpen=1&activeCell=Taul1!A1"
+        },
+        "fieldsUi": {
+          "values": [
+            {
+              "column": "Nimi",
+              "fieldValue": "={{ $json.body.nimi }}"
+            },
+            {
+              "column": "email",
+              "fieldValue": "={{ $json.body.email }}"
+            },
+            {
+              "column": "puhelin",
+              "fieldValue": "={{ $json.body.puhelin }}"
+            },
+            {
+              "column": "jäseneksi",
+              "fieldValue": "={{ $json.body.haluan_jaseneksi }}"
+            },
+            {
+              "column": "uutiskirje",
+              "fieldValue": "={{ $json.body.haluan_jasenkirjeen }}"
+            },
+            {
+              "column": "suostumus"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.microsoftExcel",
+      "typeVersion": 2.2,
+      "position": [
+        1232,
+        -16
+      ],
+      "id": "ea1c8e58-f7f0-4d88-8c28-66b603a35e21",
+      "name": "Append data to sheet1",
+      "credentials": {
+        "microsoftExcelOAuth2Api": {
+          "id": "kFWdlzZKFnlesS5Y",
+          "name": "Microsoft Excel account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "worksheet",
+        "operation": "append",
+        "workbook": {
+          "__rl": true,
+          "value": "01N3H5JFUJSMMCZCWQDBB36S7K3HYR6IOW",
+          "mode": "list",
+          "cachedResultName": "jasenilmoittautuminen",
+          "cachedResultUrl": "https://kontiotupa-my.sharepoint.com/personal/hallinto_kontiolahdentyottomat_fi/_layouts/15/Doc.aspx?sourcedoc=%7B2C189389-D08A-4318-BF4B-EAD9F11F21D6%7D&file=jasenilmoittautuminen.xlsx&action=default&mobileredirect=true&DefaultItemOpen=1"
+        },
+        "worksheet": {
+          "__rl": true,
+          "value": "{00000000-0001-0000-0000-000000000000}",
+          "mode": "list",
+          "cachedResultName": "Taul1",
+          "cachedResultUrl": "https://kontiotupa-my.sharepoint.com/personal/hallinto_kontiolahdentyottomat_fi/_layouts/15/Doc.aspx?sourcedoc=%7B2C189389-D08A-4318-BF4B-EAD9F11F21D6%7D&file=jasenilmoittautuminen.xlsx&action=default&mobileredirect=true&DefaultItemOpen=1&activeCell=Taul1!A1"
+        },
+        "fieldsUi": {
+          "values": [
+            {
+              "column": "Nimi",
+              "fieldValue": "={{ $json.body.nimi }}"
+            },
+            {
+              "column": "email",
+              "fieldValue": "={{ $json.body.email }}"
+            },
+            {
+              "column": "puhelin",
+              "fieldValue": "={{ $json.body.puhelin }}"
+            },
+            {
+              "column": "jäseneksi",
+              "fieldValue": "={{ $json.body.haluan_jaseneksi }}"
+            },
+            {
+              "column": "uutiskirje",
+              "fieldValue": "={{ $json.body.haluan_jasenkirjeen }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.microsoftExcel",
+      "typeVersion": 2.2,
+      "position": [
+        1232,
+        -272
+      ],
+      "id": "c2bb94e2-d292-4355-a53f-d09dcac36502",
+      "name": "Append data to sheet2",
+      "credentials": {
+        "microsoftExcelOAuth2Api": {
+          "id": "kFWdlzZKFnlesS5Y",
+          "name": "Microsoft Excel account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 2,
+      "position": [
+        416,
+        -32
+      ],
+      "id": "3ab29aa9-fefd-4b9f-b896-35775be93e61",
+      "name": "Date & Time"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Date & Time",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "If - jäsenkirje",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If - jäsenkirje": {
+      "main": [
+        [
+          {
+            "node": "If - jäseneksi2",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "If - jäseneksi",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If - jäseneksi2": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Append data to sheet2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If - jäseneksi": {
+      "main": [
+        [
+          {
+            "node": "Append data to sheet1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields1": {
+      "main": [
+        [
+          {
+            "node": "Append data to sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Date & Time": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "availableInMCP": false
+  },
+  "versionId": "86f766ee-2856-425c-b817-47f038bfa4e0",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "8837899abd9f86e2b65faef279502f26a61fb5a42b75296b8b4689051c6b02ef"
+  },
+  "id": "lUMoZHYeHESP4j6B",
+  "tags": []
+}
