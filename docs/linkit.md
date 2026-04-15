@@ -1,6 +1,6 @@
 # LINKIT – Kontiolahden Työttömät ry
 
-Kokoelma kaikkia verkkopalveluita, kanavia ja työkaluja.
+Kokoelma kaikkia verkkopalveluita, joiden ylläpidossa olen mukana, tai olen toteuttanut tai tuottanut sisältöä.
 
 ## 🌐 Pääsivustot
 
