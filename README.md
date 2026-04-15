@@ -1,7 +1,7 @@
 # demos
-# n8n & Digitaalinen Infrastruktuuri
 
-Tämä repository sisältää **Kontiolahden Työttömät ry:n** ja **Kontiotuvan** digitaalisen kehityksen materiaalit.
+
+Tämä repository sisältää **Kontiolahden Työttömät ry:n** ja **Kontiotuvan** digitaalisen kehityksen materiaalia, sekä muita omia projektejani.
 
 Kaikki automaatiot, Docker-stackit, lomakkeet ja dokumentaatio yhdessä paikassa.
 
