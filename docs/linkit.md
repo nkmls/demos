@@ -1,4 +1,4 @@
-# LINKIT – Kontiolahden Työttömät ry
+# LINKIT – 
 
 Kokoelma kaikkia verkkopalveluita, joiden ylläpidossa olen mukana, tai olen toteuttanut tai tuottanut sisältöä.
 
