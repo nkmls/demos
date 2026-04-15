@@ -31,7 +31,7 @@ Kaikki automaatiot, Docker-stackit, lomakkeet ja dokumentaatio yhdessä paikassa
 
 ## 🛠️ Tekninen stack
 
-- **n8n** (self-hosted) + PostgreSQL + Qdrant + Redis
+- **n8n** (self-hosted) + PostgreSQL + Qdrant 
 - **Caddy** (reverse proxy + HTTPS)
 - **Microsoft 365** (Outlook, OneDrive, Calendar, Excel, Forms)
 - **xAI Grok API**
