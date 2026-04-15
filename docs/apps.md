@@ -12,3 +12,29 @@
 **Huomioita:**
 - Secretit ovat tallennettu n8n Credentials -osioon (ei GitHubiin!)
 - Certificate / Secret vanhenee: [päivämäärä]
+
+
+Käytössä olevat N8N credentialit  
+Microsoft Excel account
+Microsoft Excel OAuth2 API | 
+
+Microsoft Outlook account
+Microsoft Outlook OAuth2 API | 
+
+Microsoft Teams account
+Microsoft Teams OAuth2 API |
+
+Ollama account
+
+Facebook Graph account
+Facebook Graph API |
+
+QdrantApi account
+QdrantApi |
+
+Wordpress account
+Wordpress API |
+
+
+Microsoft Drive account
+Microsoft Drive OAuth2 API |
