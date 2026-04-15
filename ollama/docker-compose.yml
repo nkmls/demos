@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  ollama:
+    image: ollama/ollama:latest
+    container_name: ollama
+    restart: unless-stopped
+    ports:
+      - "11434:11434"                  # expose to host if needed
+    volumes:
+      - ./ollama-data:/root/.ollama    # persistent models storage
+    networks:
+      - ai-net
+
+networks:
+  ai-net:
+    external: true                     # or remove if you create it here
