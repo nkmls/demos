@@ -27,7 +27,7 @@ Kaikki automaatiot, Docker-stackit, lomakkeet ja dokumentaatio yhdessä paikassa
 - **YouTube – Lumi AI** → [@lumi-ai.online](https://www.youtube.com/@lumi-ai.online)
 - **Lehmon Pallo ry** → [lehpa.fi](https://lehpa.fi)
 
-**Lisää linkkejä** → katso [LINKIT.md](./LINKIT.md)
+**Lisää linkkejä** → katso [LINKIT.md](./docs/linkit.md)
 
 ## 🛠️ Tekninen stack
 
