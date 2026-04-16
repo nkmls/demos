@@ -45,7 +45,7 @@ Katso `docker/docker-compose.yml` tiedostosta palvelut:
 - Haetaan samankaltaisia dokumentteja Qdrantista
 - Lähetetään konteksti Grok:lle
 
-katso [workflow.md]
+→ katso [workflow.md](./docs/workflow.md) |
 
 ## Asennusohjeet
 
