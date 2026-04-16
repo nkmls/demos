@@ -3,7 +3,7 @@
   "nodes": [
     {
       "parameters": {
-        "url": "http://204.168.136.252:8001/stm-ajankohtaista.json",
+        "url": "stm-ajankohtaista.json",
         "options": {}
       },
       "type": "n8n-nodes-base.httpRequest",
@@ -157,7 +157,7 @@
           "value": "19:7f48746d7a2e45959ba1e8021bf54922@thread.tacv2",
           "mode": "list",
           "cachedResultName": "Tiedotteet ja tapahtumat",
-          "cachedResultUrl": "https://teams.cloud.microsoft/l/channel/19%3A7f48746d7a2e45959ba1e8021bf54922%40thread.tacv2/Tiedotteet%20ja%20tapahtumat?groupId=4702b037-3844-4570-b7a6-584e7daf0077&tenantId=a3cbdf44-9a93-4c90-864f-9bf52cd2f348&allowXTenantAccess=False"
+          "cachedResultUrl": ""
         },
         "contentType": "html",
         "message": "={{ $json.Otsikko }}\n\n{{ $json.ingressi }}\n\n{{ $json['sisältö'] }}",
