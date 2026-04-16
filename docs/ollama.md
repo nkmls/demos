@@ -45,10 +45,7 @@ Katso `docker/docker-compose.yml` tiedostosta palvelut:
 - Haetaan samankaltaisia dokumentteja Qdrantista
 - Lähetetään konteksti Grok:lle
 
-### 3. Käytännön esimerkit Kontiotuvassa
-- Lahjoituskuvausten automaattinen luokittelu
-- Jäsenhakemusten semanttinen ryhmittely
-- Tapahtumakuvausten haku ja uudelleenkäyttö
+katso [workflow.md]
 
 ## Asennusohjeet
 
