@@ -1,4 +1,4 @@
-# Microsoft App Registrations (Entra ID)
+#App Registrations & other apis
 
 | Sovellus nimi                  | Application (client) ID                  | Käyttötarkoitus                       |          | Scope / Permissions                          | Status |
 |-------------------------------|------------------------------------------|------------------------------------------|-------------|----------------------------------------------|--------|
