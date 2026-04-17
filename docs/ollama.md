@@ -54,7 +54,7 @@ Katso `docker-compose.yml` tiedostosta palvelut:
    docker compose  docker-compose.yml up -d
 
 2. Pullaa haluttu malli:
-```bash
+
 docker exec -it ollama ollama pull nomic-embed-text
 
 
