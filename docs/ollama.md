@@ -49,7 +49,7 @@ Katso `docker-compose.yml` tiedostosta palvelut:
 
 ## Asennusohjeet
 
-1. Lisää `ollama/qdrant` palvelu `docker-compose.yml`:iin
+1. Lisää `ollama/qdrant` palvelu `docker-compose.yml`:iin ja aja komento:
 ```bash
    docker compose  docker-compose.yml up -d
 
