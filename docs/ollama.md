@@ -52,6 +52,7 @@ Katso `docker-compose.yml` tiedostosta palvelut:
 1. Lisää `ollama/qdrant` palvelu `docker-compose.yml`:iin
 ```bash
    docker compose  docker-compose.yml up -d
+
 2. Pullaa haluttu malli:
    ```bash
    docker exec -it ollama ollama pull nomic-embed-text
