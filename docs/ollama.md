@@ -29,7 +29,7 @@ Käytämme tekstin embeddings-malleja, jotta voimme:
 
 ## Docker-konfiguraatio (qdrant + ollama)
 
-Katso `docker/docker-compose.yml` tiedostosta palvelut:
+Katso `docker-compose.yml` tiedostosta palvelut:
 - `qdrant` – Vektoritietokanta
 - `ollama` – Paikallinen LLM-palvelu (embeddings + chat)
 
