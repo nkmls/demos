@@ -57,3 +57,7 @@ Katso `docker-compose.yml` tiedostosta palvelut:
 ```bash
    docker exec -it ollama ollama pull nomic-embed-text
 
+
+```bash
+   docker exec -it ollama ollama pull nomic-embed-text
+
