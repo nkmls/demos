@@ -46,7 +46,7 @@ Kaikki automaatiot, Docker-stackit, lomakkeet ja dokumentaatio yhdessä paikassa
 
 ---
 
-**Ylläpitäjä:** [Niko Mölsä] – Varapuheenjohtaja & ICT-vastaava  
+**Ylläpitäjä:** **[Niko Mölsä** – Varapuheenjohtaja & ICT-vastaava  
 **Status:** Kehitysvaihe (vapaaehtoistyö)  
 **Päivitetty:** 15.4.2026
 
