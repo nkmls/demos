@@ -53,6 +53,7 @@ quote-style = "double"
 python_version = "3.10"
 warn_return_any = true
 warn_unused_configs = true
+
 3. Tyypitys (Type Hinting)
 Kaikki uusi koodi sisältää tyypit – ne toimivat itsestäänselvänä dokumentaationa.
 Esimerkki:
@@ -60,7 +61,7 @@ Pythonfrom datetime import date
 from typing import List, Dict
 
 def hae_tulevat_tapahtumat(paivat_eteenpain: int = 30) -> List[Dict]:
-    ...
+    ... 
 ### 4. Ympäristön hallinta ##
 
 Älä koskaan asenna paketteja globaalisti.
