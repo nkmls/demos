@@ -6,50 +6,129 @@ Käytä aina python.md-tiedostoa ohjeena.
 
 Tehtävä: {{query}}
 
-Kirjoita koodi siten, että myös vapaaehtoiset ilman vahvaa ohjelmointitaustaa ymmärtävät sen.
-Python Kehityskäytännöt
-Tämä asiakirja määrittelee standardit ja parhaat käytännöt Python-kehitykseen. Tavoitteena on koodin luettavuus, ylläpidettävyys ja turvallisuus.
-1. Ydinperiaatteet
-Zen of Python: Nouda import this -periaatteita. Yksinkertainen on parempi kuin monimutkainen.
-Luettavuus: Koodi luetaan useammin kuin kirjoitetaan. Käytä kuvaavia nimiä.
-Eksplisiittisyys: Suosi selkeää logiikkaa taikuuden (magic methods) sijaan, ellei se ole välttämätöntä.
-2. Koodityyli & Työkalut
-Käytä automaatiota tyylin ylläpitämiseen.
-Työkalu	Käyttötarkoitus
-Ruff	Lintuus (linting) ja nopea muotoilu. Korvaa Flake8/isortin.
-Black	Ehdoton koodin muotoilija (formatter).
-Mypy	Staattinen tyypintarkistus.
-Pytest	Testauksen standardi.
-Konfiguraatio (pyproject.toml)
+# Python Kehityskäytännöt – Kontiolahden Työttömät ry
 
-Keskitä työkalujen asetukset yhteen tiedostoon:
-toml
+Tämä asiakirja määrittelee standardit ja parhaat käytännöt Python-skriptien kehittämiseen yhdistyksessämme.  
+**Tavoitteena** on koodin **luettavuus**, **ylläpidettävyys** ja **helppo ymmärrettävyys** myös vapaaehtoisille, joilla ei ole vahvaa ohjelmointitaustaa.
+
+Koodi tukee yhdistyksen missiota:  
+yksinäisyyden vähentäminen, tapahtumien organisointi, ruokajako, kirpputorin hallinta, ilmoittautumiset ym.
+
+## 1. Ydinperiaatteet (Zen of Python)
+
+- **Yksinkertainen on parempi kuin monimutkainen.**
+- Koodia luetaan paljon useammin kuin kirjoitetaan → **luettavuus ensin**.
+- Käytä kuvaavia, mielellään suomenkielisiä muuttujia ja funktioiden nimiä.
+- Pidä funktiot pieninä: yksi funktio – yksi selkeä tehtävä.
+- Suosi eksplisiittistä koodia "taikuuden" sijaan.
+- Sisällytä aina debug-lokitus (`logging`).
+
+## 2. Koodityyli & Työkalut (2026)
+
+Käytä seuraavia työkaluja:
+
+| Työkalu     | Käyttötarkoitus                          | Komento-esimerkki                  |
+|-------------|------------------------------------------|------------------------------------|
+| **Ruff**    | Linting + formaus (korvaa Flake8, isort ja Blackin monessa tapauksessa) | `ruff check .` ja `ruff format .` |
+| **Mypy**    | Staattinen tyypintarkistus               | `mypy .`                           |
+| **Pytest**  | Testaus (myöhemmin, ei pakollinen aluksi)| `pytest`                           |
+
+### Konfiguraatio (pyproject.toml)
+
+Kaikki asetukset keskitetään yhteen tiedostoon:
+
+```toml
 [tool.ruff]
-select = ["E", "F", "I"]
 line-length = 88
+target-version = "py310"
 
-[tool.black]
-line-length = 88
-Käytä koodia harkiten.
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+ignore = []
+
+[tool.ruff.format]
+quote-style = "double"
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
 3. Tyypitys (Type Hinting)
-Kaikki uusi koodi on tyypitettävä. Se toimii dokumentaationa ja estää virheitä.
-python
-def laske_palkka(tunnit: float, tuntipalkka: float) -> float:
-    return tunnit * tuntipalkka
-Käytä koodia harkiten.
+Kaikki uusi koodi sisältää tyypit – ne toimivat itsestäänselvänä dokumentaationa.
+Esimerkki:
+Pythonfrom datetime import date
+from typing import List, Dict
+
+def hae_tulevat_tapahtumat(paivat_eteenpain: int = 30) -> List[Dict]:
+    ...
 4. Ympäristön hallinta
+
 Älä koskaan asenna paketteja globaalisti.
-Käytä virtuaaliympäristöä: python -m venv .venv.
-Suositellut hallintatyökalut: Poetry, uv tai pip-tools.
-5. Tietoturva
-Ympäristömuuttujat: Käytä .env-tiedostoja (esim. python-dotenv). Älä koodaa API-avaimia kovakoodatusti.
-Riippuvuudet: Päivitä paketit säännöllisesti ja tarkista haavoittuvuudet: pip audit.
-6. Luokat ja Funktiot
-Docstrings: Käytä Google- tai NumPy-tyyliä monimutkaisissa funktioissa.
-Pienet funktiot: Yksi funktio, yksi vastuu.
-Poikkeukset: Ole täsmällinen. except Exception: on kielletty; käytä esim. except ValueError:.
-7. Testauskäytännöt
-sisällytä ohjelmaan debug logit
-Kirjoita testit tests/-hakemistoon.
-Tavoittele merkityksellistä kattavuutta (coverage), älä vain 100 % lukua.
-Käytä conftest.py-tiedostoa yhteisille fixtureille.
+Käytä aina virtuaaliympäristöä:Bashpython -m venv .venv
+# Windows:
+.venv\Scripts\activate
+# Linux / Mac:
+source .venv/bin/activate
+Suositeltu riippuvuuksien hallinta: pip + requirements.txt (yksinkertaisin) tai uv edistyneemmille.
+Älä commita .venv-kansiota GitHubiin.
+
+5. Tietoturva ja eettisyys
+
+Älä kovakoodaa salaisuuksia (sähköpostiosoitteet, API-avaimet jne.).
+Käytä .env-tiedostoa (python-dotenv).
+GDPR-huomio: Älä tallenna turhia henkilötietoja. Ruokajaossa ja kirpputorilla anonymisoi tiedot aina kun mahdollista.
+Päivitä riippuvuudet säännöllisesti: pip list --outdated.
+
+6. Projektirakenne (suositus)
+Yksinkertainen ja selkeä rakenne pienelle yhdistykselle:
+textkontiolahti_automaatio/
+├── .venv/                  # Virtuaaliympäristö (ÄLÄ commitaa)
+├── .env                    # Salaiset asetukset (ÄLÄ commitaa)
+├── pyproject.toml
+├── README.md               # Selkeät suomenkieliset käyttöohjeet
+├── requirements.txt        # Riippuvuudet
+├── data/                   # Tietokannat, listat (ruokajako.csv, kirpputori.yaml...)
+├── tapahtumat/
+│   ├── __init__.py
+│   ├── tapahtuma_ilmoittaja.py
+│   └── tapahtumat.yaml     # Tapahtumat helposti muokattavassa muodossa
+├── utils/                  # Yhteiset apufunktiot (logging, päivämääräapu jne.)
+├── tests/                  # Testit (myöhemmin)
+└── kirpputori/             # Kirpputoriin liittyvät skriptit
+7. Tapahtumien ja datan hallinta (yhdistysspesifi)
+
+Älä kovakoodaa tapahtumia suoraan .py-tiedostoon.
+Käytä mieluiten tapahtumat.yaml-tiedostoa (helppo muokata tekstieditorilla).
+Tue toistuvia tapahtumia (Äijäryhmä, bingo, vauva-treffit jne.) – suunnittele tulevaisuudessa funktio, joka generoi tapahtumia säännöllisesti.
+Esimerkki YAML-rakenne:YAML- nimi: "Äijäryhmä"
+  paikka: "Kontiotupa"
+  toistuvuus: "joka kuukauden 1. torstai"
+  kuvaus: "..."
+
+8. Luokat, funktiot ja dokumentointi
+
+Käytä Google-tyylisiä docstringejä monimutkaisemmissa funktioissa.
+Poikkeukset: Ole tarkka → except ValueError: eikä except Exception:.
+Jokaisessa pääskriptissä:
+Selkeä otsikko ja kuvaus docstringissä (suomeksi).
+if __name__ == "__main__": main()
+
+
+9. Testaus ja debuggaus
+
+Sisällytä aina logging-moduuli (INFO-taso + virheet).
+Aloita kevyesti: print() + logging.
+Myöhemmin: kirjoita testit tests/-hakemistoon.
+
+10. Käyttöönotto vapaaehtoisille (yksinkertainen ohje)
+
+Kloonaa repositorio.
+Luo virtuaaliympäristö ja aktivoi se.
+pip install -r requirements.txt
+Muokkaa tarvittaessa tapahtumat.yaml tai .env.
+Aja esim. python tapahtumat/tapahtuma_ilmoittaja.py
+
+Muista: Koodin tarkoitus on helpottaa vapaaehtoisten arkea – ei tehdä siitä vaikeampaa.
+
+Tämä versio on valmis käytettäväksi. Se on pidetty helppolukuisena ja käytännönläheisenä, mutta sisältää modernit 2026-suositukset (erityisesti Ruff).
+Haluatko, että teen vielä pienempiä säätöjä (esim. lisään esimerkin tapahtumat.yaml:sta tai requirements.txt:stä)? Vai siirrytäänkö suoraan luomaan paranneltu tapahtuma_ilmoittaja.py tämän uuden ohjeistuksen mukaisesti?
