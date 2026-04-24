@@ -61,7 +61,7 @@ from typing import List, Dict
 
 def hae_tulevat_tapahtumat(paivat_eteenpain: int = 30) -> List[Dict]:
     ...
-4. Ympäristön hallinta
+### 4. Ympäristön hallinta ##
 
 Älä koskaan asenna paketteja globaalisti.
 Käytä aina virtuaaliympäristöä:Bashpython -m venv .venv
