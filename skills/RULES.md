@@ -1,6 +1,6 @@
 # Kontiolahden Työttömät ry – SÄÄNTÖJEN KÄYTTÖOHJEET AI:LLE
 
-**Voimassa oleva versio:** KTRY sääntöehdotus 2026 (hyväksymättä)
+**Voimassa oleva versio:** KTRY sääntöehdotus 2026 **(hyväksymättä)**
 
 Tätä tiedostoa käytetään aina, kun AI:n täytyy antaa neuvoja, tulkintoja, päätöksiä tai vastauksia, jotka liittyvät yhdistyksen sääntöihin. **Älä koskaan anna vastausta pelkästään muistista** – tarkista aina näistä säännöistä.
 
