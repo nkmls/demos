@@ -15,9 +15,9 @@ Kaikki automaatiot, Docker-stackit, lomakkeet ja dokumentaatio yhdessä paikassa
 | `n8n/`          | n8n-spesifiset asetukset ja custom-nodet |
 | `qdrant/`       | Vektoritietokanta AI-agentteja varten |
 | `scripts/`      | Apuskriptit ja työkalut |
-| `workflows/`    | n8n workflow JSON-tiedostot → katso [docs/workflow.md](./docs/workflow.md) |
+| `workflows/`    | n8n workflow JSON-tiedostot → katso [/docs/workflow.md](./docs/workflow.md) |
 | `ollama/`      | Ollama asetukset |
-| `skills/`      |  Osaamisopas ja ohjekirjasto AI varten → katso [skills/README.md](./skills/README.md) |
+| `skills/`      |  Osaamisopas ja ohjekirjasto AI varten → katso [/skills/README.md](./skills/README.md) |
 
 
 ## 🌐 Verkkopalvelut ja kanavat
