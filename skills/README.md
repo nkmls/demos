@@ -20,7 +20,7 @@ Tämä on kuin **yhteinen muistiinpanojen kirja**, jota sekä ihmiset että teko
 
 ## 🚀 Esimerkkejä aloittelijoille ja uusille jäsenille
 
-| Tilanne – mitä haluat tehdä?                  | Mitä skillejä AI käyttää automaattisesti                  | Mitä saat lopputuloksena? |
+| Esimerkkitilanne – mitä haluat tehdä?                  | Mitä skillejä AI käyttää automaattisesti                  | Mitä saat lopputuloksena? |
 |-----------------------------------------------|-----------------------------------------------------------|---------------------------|
 | Haluan tehdä kauniin landing pagen            | `DESIGN.md` + `HTML.md`                                   | Valmis HTML-koodi oikeilla väreillä ja mobiili-first |
 | Kirpputorille tulee uusi tuote                | `KIRPPUTORI.md` + `VIESTINTA.md` + `DESIGN.md`           | Lämmin tuoteilmoitus + kuvaus + Teams-viesti |
