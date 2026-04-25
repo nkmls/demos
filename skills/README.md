@@ -47,6 +47,8 @@ Aloita aina lukemalla ensin **[DESIGN.md](./DESIGN.md)** – se kertoo miten kai
 | **[TAPAHTUMAT.md](./TAPAHTUMAT.md)** | Tapahtumien suunnittelu ja tiedotus |
 | **[TOIMINTASUUNNITELMA.md](./TOIMINTASUUNNITELMA.md)** | Virallinen toimintasuunnitelma 2026 |
 | **[VIESTINTA.md](./VIESTINTA.md)** | Lämpimän ja kannustavan viestinnän säännöt |
+| **[RULES.md](./RULES.md)** | Yhdistyksen säännöt |
+
 
 ---
 
