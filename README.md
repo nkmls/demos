@@ -17,7 +17,7 @@ Kaikki automaatiot, Docker-stackit, lomakkeet ja dokumentaatio yhdessä paikassa
 | `scripts/`      | Apuskriptit ja työkalut |
 | `workflows/`    | n8n workflow JSON-tiedostot → katso [workflow.md](./docs/workflow.md) |
 | `ollama/`      | Ollama asetukset |
-| `skills/`      |  Osaamisopas ja ohjekirjasto katso [README.md](./skills/README.md) |
+| `skills/`      |  Osaamisopas ja ohjekirjasto AI varten → katso [README.md](./skills/README.md) |
 
 
 ## 🌐 Verkkopalvelut ja kanavat
