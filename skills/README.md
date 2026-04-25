@@ -18,7 +18,7 @@ Tämä on kuin **yhteinen muistiinpanojen kirja**, jota sekä ihmiset että teko
 
 ---
 
-## 🚀 Esimerkkejä aloittelijoille ja uusille jäsenille
+## 🚀 Esimerkkejä
 
 | Esimerkkitilanne – mitä haluat tehdä?                  | Mitä skillejä AI käyttää automaattisesti                  | Mitä saat lopputuloksena? |
 |-----------------------------------------------|-----------------------------------------------------------|---------------------------|
