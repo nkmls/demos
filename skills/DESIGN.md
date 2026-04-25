@@ -2,6 +2,7 @@
 ---
 name: Kontiolahti Yhdistys
 description: Minimalistinen design järjestöille – luotettava, yhteisöllinen ja digitalisoitu. Inspiroituna Kontiolahden Työttömien Yhdistys & Kontiotupa.
+
 colors:
   primary: "#2E5B4D"      # Metsänvihreä – luottamus & luonto (Pohjois-Karjala)
   secondary: "#6B7280"    # Harmaa – neutraali metadata
@@ -10,40 +11,49 @@ colors:
   on-primary: "#FFFFFF"   # Teksti vihreällä
   success: "#10B981"
   error: "#EF4444"
+  
 typography:
+
   h1:
     fontFamily: "Inter"        # Moderni sans-serif (Google Fonts)
     fontSize: 2.5rem
     fontWeight: 700
     lineHeight: 1.2
+    
   h2:
     fontFamily: "Inter"
     fontSize: 1.875rem
     fontWeight: 600
+    
   body-lg:
     fontFamily: "Inter"
     fontSize: 1.125rem
     lineHeight: 1.6
+    
   body-md:
     fontFamily: "Inter"
     fontSize: 1rem
     lineHeight: 1.5
+    
   label-sm:
     fontFamily: "Inter"
     fontSize: 0.875rem
     fontWeight: 500
     textTransform: uppercase
+    
 rounded:
   xs: 4px
   sm: 6px
   md: 8px
   lg: 12px
+  
 spacing:
   xs: 4px
   sm: 8px
   md: 16px
   lg: 24px
   xl: 32px
+  
 components:
   button-primary:
     backgroundColor: "{colors.primary}"
@@ -51,6 +61,7 @@ components:
     rounded: "{rounded.sm}"
     padding: "{spacing.md} {spacing.lg}"
     typography: "{typography.body-md}"
+    
   button-secondary:
     backgroundColor: "transparent"
     textColor: "{colors.primary}"
@@ -58,11 +69,13 @@ components:
     borderWidth: "1px"
     rounded: "{rounded.sm}"
     padding: "{spacing.md} {spacing.lg}"
+    
   card:
     backgroundColor: "{colors.neutral}"
     rounded: "{rounded.md}"
     padding: "{spacing.lg}"
     shadow: "0 1px 3px rgba(0,0,0,0.1)"
+    
 ---
 
 ## Overview
