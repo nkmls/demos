@@ -1,4 +1,5 @@
 # 📁 skills
+**Kehitysvaiheessa**
 
 **Osaamisopas ja ohjekirjasto** – nkmls/demos-repositorio
 
