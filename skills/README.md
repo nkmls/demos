@@ -1,43 +1,65 @@
 # 📁 skills
 
-Tämä kansio sisältää **kaikki osaamisoppaat ja parhaat käytännöt** nkmls/demos-repositorioon.
+**Osaamisopas ja ohjekirjasto** – nkmls/demos-repositorio
 
-Kaikki ohjeet on tehty noudattaen [DESIGN.md](./DESIGN.md):ää – selkeästi, saavutettavasti ja Kontiolahden luontohenkisesti (vihreä luottamus, minimalismi, korkea kontrasti).
-
-## 🎯 Mihin tätä käytetään?
-
-- Pikaopas uusille tekijöille  
-- Yhtenäinen tyyli kaikissa projekteissa (web-sivut, landing paget, n8n-botit, tapahtumasivut, WP-sivut)  
-- Dokumentaatio erilaisille taidoille ja projekteille
-
-## 📋 Tiedostot
-
-| Tiedosto                  | Sisältö                                                                 | Viimeksi päivitetty |
-|---------------------------|-------------------------------------------------------------------------|---------------------|
-| **[DESIGN.md](./DESIGN.md)**     | Visuaalinen tyyliopas (värit, typografia, komponentit, Do’s & Don’ts) | 1 tunti sitten     |
-| **[HTML.md](./HTML.md)**         | HTML-templatet, landing page -rakenteet ja Tailwind-komponentit        | eilen              |
-| **[KIRPPUTORI.md](./KIRPPUTORI.md)** | Kirpputori-projektin tekniset ja visuaaliset ohjeet                   | eilen              |
-| **[KONTIOTUPA.md](./KONTIOTUPA.md)** | Kontiotupa-projektin dokumentaatio ja ohjeet                           | eilen              |
-| **[PYTHON.md](./PYTHON.md)**     | Python-osaamisen ohjeet ja skriptipohjat                               | 20 tuntia sitten   |
-| **[ROUTE.md](./ROUTE.md)**       | Reititys- ja navigaatio-ohjeet (sivut, linkit, n8n-flowt)             | eilen              |
-| **[TAPAHTUMAT.md](./TAPAHTUMAT.md)** | Tapahtumien hallinta, ilmoittautumiset ja sivurakenteet               | eilen              |
-| **[TOIMINTASUUNNITELMA.md](./TOIMINTASUUNNITELMA.md)** | Projektien toimintasuunnitelmat ja prosessit                     | eilen              |
-| **[VIESTINTA.md](./VIESTINTA.md)** | Viestintäohjeet, some-pohjat ja sisäinen kommunikaatio                | eilen              |
-
-## 🚀 Näin käytät tätä kansiota
-
-1. **Aloita aina DESIGN.md:stä** – se määrittää koko visuaalisen ilmeen.
-2. Tarvitsetko landing pageä? → katso `HTML.md`
-3. Teetkö Kirpputoria tai Kontiotupaa? → avaa kyseinen projektitiedosto.
-4. Kaikki uudet ohjeet lisätään tähän kansioon samalla tyylillä.
-
-## Yhteys muuhun repositorioon
-
-Tämä on osa [nkmls/demos](https://github.com/nkmls/demos) -projektia.
-
-Kaikki sivut ja botit noudattavat näitä ohjeita → yhdenmukainen brändi ja helppo ylläpito.
+Tämä kansio sisältää **skillit** (ohjeistukset), joita tekoäly automaattisesti käyttää eri workflowissa (erityisesti n8n:ssä).
 
 ---
 
-**Kysyttävää?**  
-Avaa issue tai pingaa repoa. Pidetään yhdessä homma selkeänä ja vihreänä! 🌲
+## 🎯 Käyttötarkoitus
+
+- **Yhtenäinen tapa tehdä asioita** – värit, tyyli, sävy ja prosessit ovat aina samat.
+- **Tekoäly osaa hakea ohjeet itse** – kun joku kysyy jotain, AI lukee tarvittavat skill-tiedostot GitHubista ja tekee työn juuri oikein.
+- **Helppo oppia uusille jäsenille ja työntekijöille** – et tarvitse tietää kaikkea etukäteen, riittää kun tiedät mistä etsiä.
+- **Modulaarinen** – yksi skill kerrallaan, helppo päivittää ilman että rikot jotain muuta.
+
+Tämä on kuin **yhteinen muistiinpanojen kirja**, jota sekä ihmiset että tekoäly käyttävät päivittäin.
+
+---
+
+## 🚀 Esimerkkejä aloittelijoille ja uusille jäsenille
+
+| Tilanne – mitä haluat tehdä?                  | Mitä skillejä AI käyttää automaattisesti                  | Mitä saat lopputuloksena? |
+|-----------------------------------------------|-----------------------------------------------------------|---------------------------|
+| Haluan tehdä kauniin landing pagen            | `DESIGN.md` + `HTML.md`                                   | Valmis HTML-koodi oikeilla väreillä ja mobiili-first |
+| Kirpputorille tulee uusi tuote                | `KIRPPUTORI.md` + `VIESTINTA.md` + `DESIGN.md`           | Lämmin tuoteilmoitus + kuvaus + Teams-viesti |
+| Järjestän kahvitilaisuuden Kontiotuvalla     | `KONTIOTUPA.md` + `TAPAHTUMAT.md` + `VIESTINTA.md`       | Ilmoitus someen + tilavarausohjeet |
+| Tarvitsen Python-skriptin ruokajaon hallintaan | `PYTHON.md` + `TAPAHTUMAT.md`                           | Valmis, helppolukuinen koodi |
+| Haluan kirjoittaa kannustavan viestin jäsenelle | `VIESTINTA.md` + `KONTIOTUPA.md`                        | Lämpimän ja inklusiivisen tekstin |
+| Tarvitsen virallisen toimintasuunnitelman osan | `TOIMINTASUUNNITELMA.md` + `VIESTINTA.md`               | Virallista mutta ihmisläheistä tekstiä |
+
+**Vinkki uusille:**  
+Aloita aina lukemalla ensin **[DESIGN.md](./DESIGN.md)** – se kertoo miten kaikki näyttää ja kuulostaa täällä.
+
+---
+
+## 📋 Kaikki skill-tiedostot
+
+| Tiedosto                        | Mihin käytetään? |
+|---------------------------------|------------------|
+| **[DESIGN.md](./DESIGN.md)**    | Värit, fontit, painikkeet, kontrasti – **pakollinen kaikissa visuaalisissa jutuissa** |
+| **[HTML.md](./HTML.md)**        | Landing paget, sivut ja Tailwind-koodaus |
+| **[KIRPPUTORI.md](./KIRPPUTORI.md)** | Töpinän Tori -kirpputorin kaikki ohjeet |
+| **[KONTIOTUPA.md](./KONTIOTUPA.md)** | Kontiotupa-kahvit, kerhot ja tilavaraukset |
+| **[PYTHON.md](./PYTHON.md)**    | Python-koodaus ja skriptit |
+| **[ROUTE.md](./ROUTE.md)**      | **AI:n reititin** – kertoo mitkä skillit tarvitaan |
+| **[TAPAHTUMAT.md](./TAPAHTUMAT.md)** | Tapahtumien suunnittelu ja tiedotus |
+| **[TOIMINTASUUNNITELMA.md](./TOIMINTASUUNNITELMA.md)** | Virallinen toimintasuunnitelma 2026 |
+| **[VIESTINTA.md](./VIESTINTA.md)** | Lämpimän ja kannustavan viestinnän säännöt |
+
+---
+
+## 🔧 Miten tämä käytännössä toimii?
+
+1. Joku lähettää viestin (Telegram, lomake tms.).
+2. n8n-workflow käynnistyy.
+3. Tekoäly lukee ensin `ROUTE.md`:n.
+4. AI päättää mitkä skill-tiedostot tarvitaan.
+5. Se hakee ne automaattisesti GitHubista (raw-linkeillä).
+6. Lopuksi AI tekee tehtävän juuri oikealla tyylillä.
+
+Sinun ei tarvitse tietää teknisiä yksityiskohtia – riittää kun teet asiat tämän kansion ohjeiden mukaan.
+
+
+
+Lisää kysymyksiä? Avaa [Issue](https://github.com/nkmls/demos/issues) tai pingaa repo.
