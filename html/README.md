@@ -1,4 +1,4 @@
-Tässä valmis Markdown-tiedosto ehdotetuksi sisällöksi ja rakenteeksi Kontiolahden Työttömät ry:n kotisivuille (vuodelle 2026).Voit kopioida tämän suoraan tiedostoon nimellä esim. KONTIOLAHDEN-TYOTTOMAT-KOTISIVUT-2026.mdmarkdown
+
 
 # Kontiolahden Työttömät ry – Kotisivujen Sisältö ja Rakenne 2026
 
