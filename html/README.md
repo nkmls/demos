@@ -67,7 +67,6 @@ Yhdistys on jäsenenä:
 - Työttömien Keskusjärjestö ry
 - Pohjois-Karjalan Työttömät ry
 
-ToimintaKontiotupamarkdown
 
 # Kontiotupa – Toiminnan sydän
 
@@ -86,7 +85,6 @@ Kontiotupa on avoin kaikille kuntalaisille. Tuvalla voi tavata muita ihmisiä, l
 
 **Retket ja tapahtumat** järjestetään säännöllisesti.
 
-Töpinän Torimarkdown
 
 # Töpinän Tori – Kierrätyskeskus
 
@@ -124,7 +122,6 @@ Kierrätyskeskus edistää kestävää kehitystä ja tarjoaa työllistymismahdol
 Tili: OP Kontiolahti FI30 5165 0720 0487 92  
 Viesti: Jäsenmaksu 2026 + Nimi + Osoite
 
-Tapahtumat & Retketmarkdown
 
 # Tapahtumat ja retket 2026
 
@@ -136,7 +133,6 @@ Tapahtumat & Retketmarkdown
 
 **Seuraa Ajankohtaista-sivua** tai Facebookia ajantasaisista tiedoista!
 
-Yhteystiedotmarkdown
 
 # Yhteystiedot
 
