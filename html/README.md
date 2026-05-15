@@ -47,7 +47,7 @@ Kontiorock keräsi 200 kävijää ja sai Kontiolahden kunnan **Nuorisopalkinnon 
 - Ruokajako Töpinän torilla ti & pe klo 10
 - Kesätapahtuma Kontiolahden torilla kesäkuussa
 
-[Liity jäseneksi →](/jaseneksi)
+[Liity jäseneksi →](/jasenlomake.html)
 
 Tietoa meistämarkdown
 
