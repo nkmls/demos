@@ -24,7 +24,9 @@ Etusivu (/)
 └── Yhteystiedot
 
 Navigointi (ylävalikko):
-Etusivu | Tietoa meistä | Toiminta | Jäseneksi | Tapahtumat | Ajankohtaista | Yhteystiedot2. Sivukohtainen sisältöEtusivu (/)markdown
+Etusivu | Tietoa meistä | Toiminta | Jäseneksi | Tapahtumat | Ajankohtaista | Yhteystiedot
+
+2. Sivukohtainen sisältö
 
 # Kontiolahden Työttömät ry
 
