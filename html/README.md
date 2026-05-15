@@ -160,11 +160,7 @@ Mobiiliystävällisyys – Erityisen tärkeää jäsenille
 Ajankohtaista-osio – Helposti päivitettävä blogi/uutisvirta
 Call-to-Action – "Liity jäseneksi" -nappi näkyviin joka sivulle
 
-Valmis!
-Tämä tiedosto toimii erinomaisena pohjasuunnitelmana sivuston uudistamiseen tai sisällöntuotantoon.Haluatko, että teen vielä erikseen:Tarkemman version jostain sivusta?
-HTML-rakenteen?
-Meta-tiedot hakukoneille (SEO)?
-Tai WordPress-elementit?
+
 
 Kerro vain, niin jatkan!
 
