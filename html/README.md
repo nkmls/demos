@@ -153,13 +153,5 @@ Keskuskatu 21, 81100 Kontiolahti
 
 **Some:** Facebook 
 
-Suosituksia tekniseen toteutukseen Visuaalinen ilme – Käytä vihreää ja sinistä (luonto & luottamus)
-Kuvat – Lisää runsaasti kuvia Kontiotuvasta, Töpinästä, Kontiorockista ja tapahtumista
-Mobiiliystävällisyys – Erityisen tärkeää jäsenille
-Ajankohtaista-osio – Helposti päivitettävä blogi/uutisvirta
-Call-to-Action – "Liity jäseneksi" -nappi näkyviin joka sivulle
 
-
-
-Kerro vain, niin jatkan!
 
