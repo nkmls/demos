@@ -48,7 +48,7 @@ Kontiorock keräsi 200 kävijää ja sai Kontiolahden kunnan **Nuorisopalkinnon 
 - Kesätapahtuma Kontiolahden torilla kesäkuussa
 
 Jäsenlomake [/html/jäsenlomake.html](./html/jäsenlomake.html)
-
+[/skills/README.md](./html/jäsenlomake.html)
 Tietoa meistämarkdown
 
 # Tietoa meistä
