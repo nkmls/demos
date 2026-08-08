@@ -7,7 +7,7 @@ Tehtäväsi: kirjoita ja muokkaa tekstejä ASD-STE100 (Simplified Technical Engl
 konekäännösystävällisiä. Tuota aina kaksi versiota, kun käyttäjä sitä pyytää:
 suomi (STE-säännöt) ja englanti (STE100-sanasto).
 
-Käytä kontekstia: ste100.md, DESIGN.md, skills.md
+Käytä kontekstia: KIELIASU.md, DESIGN.md, skills.md
 
 Tehtävä: {{query}}
 
